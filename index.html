@@ -9,37 +9,89 @@
   </head>
 
   <body>
-    <nav class="">
-      <div class="left-section">
-        <img class src="images/Logo.png" />
-      </div>
+    <nav id="navigation">
+      <section class="nav-section">
+        <div class="left-section">
+          <img class="logo" src="images/Logo.png" alt="Tiff's personal logo" />
+        </div>
 
-      <div class="right-section">
-        <a class="navigation">Tech Blogs</a>
-        <a class="navigation">Core Blogs</a>
-        <a class="navigation">Contact</a>
-      </div>
+        <div class="right-section">
+          <a class="nav-menu">Tech Blogs</a>
+          <a class="nav-menu">Core Blogs</a>
+          <a class="nav-menu">Contact</a>
+        </div>
+      </section>
     </nav>
 
-    <header>
-      <h1>TIFF's THOUGHTS</h1>
+    <header id="hero">
+      <h1>Tiff's TECH THOUGHTS</h1>
+      <p class="description">
+        Hi, I'm Tiff. Welcome to my tech research and coding learning journey!
+        As I delve into the world of technology, I aim to strenthen my knowledge
+        through thought-provoking blogs and insightful reflections in the realm
+        of coding. If you're a curious tech beginner just like me, let's dive in
+        together!
+      </p>
     </header>
 
+    <hr />
+
     <main>
-      <div>
+      <div id="blog-container">
         <article>
-          <h2>Blog 1</h2>
-          <p>Blog summary</p>
-          <p>date</p>
+          <a href="#">
+            <img
+              class="blog-image"
+              src="images/ID-vs-CSS.png"
+              alt="an illustration of ID vs CSS."
+            />
+          </a>
+
+          <h2>Inline vs inline blocks, what does it mean?</h2>
+
+          <p class="blog-summary">
+            Inline, block, and inline block sound similar and sometimes can be
+            confusing to the newbie frond-end developers. Let's find out the
+            differences.
+          </p>
+          <p class="date">June 20th, 2023</p>
         </article>
 
         <article>
-          <h2>Blog 2</h2>
-          <p>Blog summary2</p>
-          <p>date</p>
+          <a href="#">
+            <img class="blog-image" src="images/IMG_1114.JPG" alt="" />
+          </a>
+
+          <h2>My learning plan of becoming a software developer.</h2>
+          <p class="blog-summary">
+            Make a plan for my future full commitment to doing what I say I will
+            do.
+          </p>
+          <p class="date">June 23rd, 2023</p>
         </article>
       </div>
+
+      <hr />
     </main>
+
+    <div id="contact">
+      <h2>Contact Me</h2>
+      <p class="contact-message">
+        Keen to share your thoughts with me?<br />
+        Feel free to contact me through email or social media.
+      </p>
+      <div class="contact-icons-wrapper">
+        <a href="#">
+          <img class="contact-icon" src="images/mail-256.png" alt="" />
+        </a>
+        <a href="#">
+          <img class="contact-icon" src="images/github-mark-white.png" alt="" />
+        </a>
+        <a href="#">
+          <img class="contact-icon" src="images/linkedin-3-256.png" alt="" />
+        </a>
+      </div>
+    </div>
 
     <footer>
       <p>©Copyright 2023 by Tiffany Wang. All rights reversed.</p>
