@@ -6,8 +6,9 @@
 
     <title>Inline vs Inline Block</title>
 
+    <link rel="stylesheet" href="../styles/navigation-bar.css" />
     <link rel="stylesheet" href="../styles/blog-page.css" />
-    <link rel="stylesheet" href="../styles/navigation-bar.css " />
+    <link rel="stylesheet" href="../styles/contact-and-footer.css" />
   </head>
 
   <body>
@@ -31,27 +32,169 @@
       </section>
     </nav>
 
-    <p>
-      Te Houtaewa was the fastest runner of his day and played many pranks on
-      his peoples enemies. One morning his mother wanted kumara for the hangi
-      (earth oven) and asked Te Houtaewa to go to the gardens at Te Kao, a short
-      distance away. He agreed to fetch the kumara and told his mother to
-      prepare the hangi.
-    </p>
-    <p>
-      Instead of going to the nearby gardens, Te Houtaewa set off for Ahipara as
-      he wanted to annoy some Te Rarawa people who lived there. Carrying two
-      large baskets for the kumara, he ran like the wind, completing the journey
-      over the hard sands of Te Oneroa a Tohe (Ninety Mile Beach) in the few
-      hours it takes a good hangi to heat up properly. On reaching Ahipara, he
-      went straight to the people's kumara pataka (storehouse for the sweet
-      potatoes) situated at the foot of the hill Whangatauatia.
-    </p>
-    <p>
-      While Te Houtaewa was filling his baskets with kumara he was spotted
-      stealing the kai (food). He was immediately recognised.
-    </p>
+    <header>
+      <p>JUNE 20, 2023</p>
+      <h1>Inline vs inline blocks, what does it mean?</h1>
+      <p>by <b><i>Tiff Wang</i></b></p>
+    </header>
 
-    <!-- this is a comment. -->
+    <article>
+      <section>
+        <p>
+          When building a website, understanding different display properties is
+          crucial for creating clean and well-structured layouts. "Inline,"
+          "Block," and "Inline-block" are three commonly used display values,
+          but I sometimes found them confusing when attempting to apply them in
+          my web development. In this blog, I'll take an in-depth look at these
+          display types with examples of code and screenshots. If you've ever
+          wondered about these concepts like me, you've come to the right place!
+        </p>
+      </section>
+
+      <section>
+        <h2>display: block;</h2>
+        <p>
+          Before looking into the "Inline" and "Inline-block", let's have a look
+          what is "Block". I first created 4 divs with different colors without
+          setting the width, and you can see that it lines vertically with each
+          div takes the whole width of the viewport.
+
+          <img src="../images/images-inline-block/Set up 4 divs.png" />
+
+          <br />
+          This shows that the divs are <b>display: block</b>. Even I change the
+          width to shorten each div, they will not move up to stay side by side,
+          but still lines vertically.
+
+          <img src="../images/images-inline-block/Change box width.png" />
+
+          <br />
+          Therefore, when an element is set to <b>display: block;</b>, it will
+          create a rectangular box that spans the entire width of its parent
+          container by default. This means that block-level elements start on a
+          new line and occupy the full width available.
+          <br>
+          <br>
+          Here are some elements that display <b>block</b> by defalt: 
+          <ul>
+            <li>div</li>
+            <li>section</li>
+            <li>p</li>
+            <li>h1</li>
+            <li>li</li>
+          </ul>
+        
+        </p>
+      </section>
+
+      <section>
+        <h2>display: inline;</h2>
+        <p>
+          Now let's see what will happen if we add a <b>display:inline</b>.
+
+          <img src="../images/images-inline-block/Display inline.png" />
+
+          <br />
+          You can see that under an <b>inline display</b>, the line breaks
+          disappear, as well as the width of each div. This means that when
+          applying <b>display:inline</b>, multiple inline elements will appear
+          next to each other horizontally, as long as there's enough space, any
+          height and width properties will no longer have effect, where the size
+          of the div depends on its content inside.
+          <br />
+          Let's demenstrate it by increasing the font of the content or adding
+          more texts.
+
+          <img src="../images/images-inline-block/Inline bigger fonts.png" />
+          <img src="../images/images-inline-block/Inline content change.png" />
+
+          <br>
+          <br>
+          Here are some elements that display <b>inline</b> by defalt:
+          <ul>
+            <li>a</li>
+            <li>span</li>
+            <li>img</li>
+          </ul>
+        </p>
+      </section>
+
+      <section>
+        <h2>display: inline-block;</h2>
+        <p>
+          We first change the edited content back. Now let's see what will
+          happen if we change the display to <b>display:inline-block</b>.
+
+          <img src="../images/images-inline-block/Display inline-block.png" />
+
+          <br />
+          We can see that the divs appear next to each other horizontally while
+          maintaining the width setting.
+          <br />
+          <br />
+          What if we add heights to the divs?
+
+          <img src="../images/images-inline-block/Change box height.png" />
+
+          <br />
+          Or setting different width and height for each div?
+
+          <img src="../images/images-inline-block/Set individual boxes.png" />
+
+          <br />
+          It can be seen that unlike inline elements, inline-block elements have
+          combines the characteristics of both inline and block elements. They
+          appear next to each other horizontally, just like inline elements, but
+          at the same time maintain its specific width and height values like
+          block elements.
+
+          <br />
+          <br />
+          Based on its charastestic, inline-block is expecially useful when you
+          want to control the layout of elements while maintaining their
+          inline-like formatting.
+        </p>
+      </section>
+
+      <section>
+        <div id="conclusion">
+        <h2>Conclusion</h2>
+        <ul class="conclusion-list">
+          <li><b>block</b>: The block element always starts on a new line and takes the full width of the viewport width or its parent's width. You can set width and height value to block elements. </li>
+          <li><b>inline</b>: Inline elements appears next to each other and only takes the width depends on its content inside. You can not set the width or height value for inline elements.</li>
+          <li><b>inline-block</b>: Inline-block element also appears next each other. But unlike inline, you are able to set width and height values for inline-block element.</li>
+        </ul>
+      </div>
+      </section>
+    </article>
+
+    <hr />
+
+    <div id="contact">
+      <h2>Contact Me</h2>
+      <p class="contact-message">
+        Keen to share your thoughts with me?<br />
+        Feel free to contact me through email or social media.
+      </p>
+      <div class="contact-icons-wrapper">
+        <a href="#">
+          <img class="contact-icon" src="../images/mail-256.png" alt="" />
+        </a>
+        <a href="#">
+          <img
+            class="contact-icon"
+            src="../images/github-mark-white.png"
+            alt=""
+          />
+        </a>
+        <a href="#">
+          <img class="contact-icon" src="../images/linkedin-3-256.png" alt="" />
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <p>©Copyright 2023 by Tiffany Wang. All rights reversed.</p>
+    </footer>
   </body>
 </html>
