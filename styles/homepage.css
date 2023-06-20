@@ -56,6 +56,19 @@ br {
   object-fit: cover;
 }
 
+.blog-image:hover {
+  opacity: 0.9;
+}
+
+article a {
+  text-decoration: none;
+}
+
+article a:hover {
+  text-decoration: underline;
+  text-decoration-color: #f7f7f7;
+}
+
 h2 {
   color: #f7f7f7;
   font-family: system-ui;
