@@ -111,6 +111,9 @@ br {
   margin-left: auto;
   margin-right: auto;
   padding: 4rem 2rem 0 2rem;
+  /* below 2 lines are to offset content from the fixed nav-bar for anchor link  */
+  padding-top: 260px;
+  margin-top: -200px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -195,6 +198,9 @@ div#blog-container h3 {
   max-width: 900px;
   padding-left: 2rem;
   padding-right: 2rem;
+  /* below 2 lines are to offset content from the fixed nav-bar for anchor link  */
+  padding-top: 300px;
+  margin-top: -300px;
 }
 
 #blog-title h1 {
@@ -286,4 +292,19 @@ footer {
   color: #b8b8b8;
   font-size: 0.8rem;
   font-family: system-ui;
+}
+
+/*back to top button*/
+aside button {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 3000;
+  background-color: #4d4d4d;
+  color: #f7f7f7;
+  font-size: 1rem;
+  border: 1px solid #f7f7f7;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
 }
