@@ -287,6 +287,10 @@ div#contact h3 {
   margin-left: 12px;
 }
 
+#contact img:hover {
+  transform: scale(1.2);
+}
+
 footer {
   text-align: center;
   color: #b8b8b8;
