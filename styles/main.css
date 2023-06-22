@@ -216,9 +216,15 @@ div#blog-container h3 {
 
 .blog-content h2 {
   margin-top: 80px;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-family: 'Times New Roman', Times, serif;
   color: #eeeeee;
+}
+
+.blog-content ol li {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 200;
 }
 
 .blog-content img {
