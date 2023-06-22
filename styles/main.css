@@ -311,11 +311,17 @@ aside button {
   bottom: 2%;
   right: 2%;
   z-index: 3000;
-  background-color: #4d4d4d;
+  background-color: transparent;
   color: #f7f7f7;
   font-size: 1rem;
   border: 1px solid #f7f7f7;
   border-radius: 5px;
   padding: 10px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+  aside button {
+    display: none;
+  }
 }
