@@ -1,4 +1,8 @@
 /* body CSS */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #4d4d4d;
   color: #f7f7f7;
@@ -86,6 +90,28 @@ header#hero h1 {
   line-height: 15vw;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+#tech {
+  animation: color-change 8s ease-in infinite;
+}
+
+@keyframes color-change {
+  0% {
+    color: rgb(233, 160, 255);
+  }
+  25% {
+    color: #ec9589;
+  }
+  50% {
+    color: #e2c47e;
+  }
+  75% {
+    color: rgb(146, 218, 188);
+  }
+  100% {
+    color: rgb(233, 160, 255);
+  }
 }
 
 header#hero h2 {
