@@ -248,10 +248,12 @@ div#blog-container h3 {
   color: #eeeeee;
 }
 
-.blog-content ol li {
-  font-size: 1rem;
-  line-height: 1.5rem;
+.blog-content ol li,
+.blog-content ul li {
+  font-size: 1.1rem;
+  line-height: 2rem;
   font-weight: 200;
+  margin-bottom: 24px;
 }
 
 .blog-content img {
@@ -269,6 +271,23 @@ div#blog-container h3 {
   font-weight: 200;
   line-height: 2rem;
   margin-bottom: 24px;
+}
+
+.blog-content table,
+tr,
+td,
+th {
+  font-size: 1.1rem;
+  line-height: 2rem;
+  font-weight: 200;
+  border: 1px solid #f7f7f7;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.8rem;
+  text-align: center;
 }
 
 @media only screen and (max-width: 480px) {
