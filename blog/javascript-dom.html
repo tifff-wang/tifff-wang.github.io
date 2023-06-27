@@ -35,7 +35,7 @@
 
     <header id="blog-title">
       <p>JUNE 27, 2023</p>
-      <h1>An introduction of JavaScript to my non-tech savvvy mum.
+      <h1>Introducing JavaScript concepts to my non-tech savvvy mum.
       </h1>
       <p>
         by
@@ -44,6 +44,7 @@
     </header>
 
     <article class="blog-content">
+      <br>
       <p>Since I started my course at Dev Academy, I've been busy with my computer, and my non-tech savvy mum has shown a lot of interest in what I'm learning. So, I've decided to explain some JavaScript concepts to her to see if I can ransform some complex jargon into friendly spells :)</p>
 
       <h2>
@@ -56,7 +57,7 @@
       </p>
 
       <h2>
-        What's control flow and loops in JavaScript?
+        What's <code class="code-text">control flow</code> and <code class="code-text">loops</code> in JavaScript?
       </h2>
 
       <p>
@@ -65,37 +66,36 @@
         <br>
         When you cook noodle, you can notice that there are several conditions, such as if the water is boiled? If the noodle is sticked to the bottom of the pot? If the noodle is tender? With each condition, we need to make different decisions and followed by corresponding actions. 
       </p>
-    <pre>
-      <code>
-        function cookNoodle() {
-        if (waterIsCold) {
-          check the heat
-        } else if (waterIsBoiled) {
-          add the noodle
-        } else {
-          wait for longer
-        }
-      }   
-    </code>
-    </pre>
+        <pre class="code-example">
+          <code>
+            function cookNoodle() {
+            if (waterIsCold) {
+              check the heat
+            } else if (waterIsBoiled) {
+              add the noodle
+            } else {
+              wait for longer
+            }
+          }   
+        </code>
+        </pre>
       
       <p>
-        The if, else if, and else in this code is called conditional statement in the control flow that allows us to control the flow of execution based on certain conditions.
+        The <code class="code-text">if</code>, <code class="code-text">else if</code>, and <code class="code-text">else</code> in this code is called conditional statement in the control flow that allows us to control the flow of execution based on certain conditions.
       </p>
 
       <p>
-        For loop, you can imaging that we have some guests come to our home and you plan to make some pancakes for the afternoon tea. You aim to make 10. As you follow the same step to make each pancake, the loop can perfectly describe this process. 
+        For <code class="code-text">loop</code>, you can imaging that we have some guests come to our home and you plan to make some pancakes for the afternoon tea. You aim to make 10. As you follow the same step to make each pancake, the loop can perfectly describe this process. 
       </p>
-        <pre>
+        <pre class="code-example">
           <code>
             for (let piece = 1; piece <= 10; piece++) {             
-              Steps of frying a pancake
-             
+              Steps of frying a pancake 
             }
           </code>
         </pre>
         <p>
-        The loop represents how we make the pancake 10 times. It starts from the first piece: piece = 1. Then it checks if the number of the pancake we made is less than 10: piece <= 10, and if it's true, it execute the pancaking frying process. Once its done, the piece count would be incremented by 1: piece++. The loop continues until the condition piece<=10 is not met.
+        The code above represents how we make the pancake 10 times. It starts from the first piece: <code class="code-text">piece = 1</code>. Then it checks if the number of the pancake we made is less than 10: <code class="code-text">piece <= 10</code>, and if it's true, it execute the pancaking frying process. Once its done, the piece count would be incremented by 1: <code class="code-text">piece++</code>. The loop continues until the condition <code class="code-text">piece <= 10</code> is not met.
         <br>
         <br>
         It can be seen that loops provide a convenient way to automate repetitive tasks by executing a block of code multiple times, saving you from writing the same code over and over again.
@@ -120,7 +120,7 @@
       </p>
 
       <h2>
-        Explain the difference between accessing data from <code>arrays</code> and <code>objects</code>.
+        Explain the difference between accessing data from <code class="code-text">arrays</code> and <code class="code-text">objects</code>.
       </h2>
 
       <p>
@@ -133,7 +133,7 @@
         To get a fruit from this array box, you need to first count its position in the box. For example, the first fruit is at position 1, the second is at position 2, and so on. To get the fruit, you need to call its position to reach it. 
         <br>
        <br>
-        Similarly, in my code, we access an element in an array by its numerical position, called the index. The first element is index 0, the second index 1, and so on. We call array[0], array[1]...array[i] to get the element. 
+        Similarly, in my code, we access an element in an array by its numerical position, called the index. The first element is index 0, the second index 1, and so on. We call <code class="code-text">array[0]</code>, <code class="code-text">array[1]</code>...<code class="code-text">array[i]</code> to get the element. 
         </p>
 
         <p>
@@ -144,30 +144,34 @@
          
            We use { } to represent object. Imagine we have a apple in our hand. The apple is an object. It has properties such as a color, size, weight, price and so on. 
            
-           Similarily, in JavaScript, the apple is the object, color, size are properties, and red, 100g is the value. Properties and its values determine the charastetics of an object. 
+           Similarily, in JavaScript, the apple is the object, color, size are properties, and red, 150g is the value. Properties and its values determine the charastetics of an object. 
           
-           <pre>
+           <pre class="code-example">
             <code>
               const apple = {
                 color: 'red',
-                weight: '100g'
+                weight: '150g'
               }
           </code>
           </pre>
 
-           To get a certian property from an object, we use . or []. For example, to get weight of the apple, we can write <code>apple.weight</code> or <code>apple['weight']</code> to get the value of 100g. 
+          <p>
+           To get a certian property from an object, we use . or []. For example, to get weight of the apple, we can write <code class="code-text">apple.weight</code> or <code class="code-text">apple['weight']</code> to get the value of 150g. 
+          </p>
            
       
            
-           </p>
+
 
            <h2>
-            Explain what functions are and why they are helpful.
+            Explain what <code class="code-text">functions</code> are and why they are helpful.
            </h2>
 
            <p>
             Functions are a fundamental concept in JavaScript In JavaScript, functions are blocks of code that perform specific tasks that you can reuse in multiple places in your program. When we write a program, we may need to use the same task multiple times, it would be very time consuming and our code would get very messy if we right the same task again and again in our code. Therefore to make it more organised and better readability, we use function to pack the steps of the task so that we only need to write the task once and reuse it by only inserting the function name. This would also contribute significantly in making the code maintenance easier. When we need to modify some part of the code of a task, you can make the change within the function instead of searching and modifying the same piece of code again and again in multiple places.
-Functions also helps to break down complex task into smaller steps. With each function carrying a single managible task, the code would be much easier to read and understand.
+            <br>
+            <br>
+            Functions also helps to break down complex task into smaller steps. With each function carrying a single managible task, the code would be much easier to read and understand.
 
            </p>
       
