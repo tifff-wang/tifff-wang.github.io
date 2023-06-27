@@ -7,6 +7,8 @@
     <title>Javascript DOM</title>
 
     <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/highlight/atom-one-light.min.css">
+    
   </head>
 
   <body>
@@ -66,17 +68,18 @@
         <br>
         When you cook noodle, you can notice that there are several conditions, such as if the water is boiled? If the noodle is sticked to the bottom of the pot? If the noodle is tender? With each condition, we need to make different decisions and followed by corresponding actions. 
       </p>
+
         <pre class="code-example">
           <code>
             function cookNoodle() {
-            if (waterIsCold) {
+              if (waterIsCold) {
               check the heat
-            } else if (waterIsBoiled) {
+             } else if (waterIsBoiled) {
               add the noodle
-            } else {
+              } else {
               wait for longer
-            }
-          }   
+              }
+            }   
         </code>
         </pre>
       
@@ -168,7 +171,7 @@
            </h2>
 
            <p>
-            Functions are a fundamental concept in JavaScript In JavaScript, functions are blocks of code that perform specific tasks that you can reuse in multiple places in your program. When we write a program, we may need to use the same task multiple times, it would be very time consuming and our code would get very messy if we right the same task again and again in our code. Therefore to make it more organised and better readability, we use function to pack the steps of the task so that we only need to write the task once and reuse it by only inserting the function name. This would also contribute significantly in making the code maintenance easier. When we need to modify some part of the code of a task, you can make the change within the function instead of searching and modifying the same piece of code again and again in multiple places.
+            Functions are a fundamental concept in JavaScript. Functions are blocks of code that perform specific tasks that you can reuse in multiple places in your program. When we write a program, we may need to use the same task multiple times, it would be very time consuming and our code would get very messy if we right the same task again and again in our code. Therefore to make it more organised and better readability, we use function to pack the steps of the task so that we only need to write the task once and reuse it by only inserting the function name. This would also contribute significantly in making the code maintenance easier. When we need to modify some part of the code of a task, you can make the change within the function instead of searching and modifying the same piece of code again and again in multiple places.
             <br>
             <br>
             Functions also helps to break down complex task into smaller steps. With each function carrying a single managible task, the code would be much easier to read and understand.
@@ -222,5 +225,8 @@
     <footer>
       <p>©Copyright 2023 by Tiffany Wang. All rights reserved.</p>
     </footer>
+
+    <script src="../styles/highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
   </body>
 </html>
