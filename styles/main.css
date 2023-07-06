@@ -248,6 +248,14 @@ div#blog-container h3 {
   color: #eeeeee;
 }
 
+.blog-content h3 {
+  margin-top: 50px;
+}
+
+.blog-content a {
+  color: rgb(233, 160, 255);
+}
+
 .blog-content ol li,
 .blog-content ul li {
   font-size: 1.1rem;
