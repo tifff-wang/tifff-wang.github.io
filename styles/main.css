@@ -129,7 +129,7 @@ br {
   color: #f7f7f7;
 }
 
-#blog-container {
+#project-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: 38rem;
@@ -150,7 +150,7 @@ br {
     flex-direction: column;
     align-items: center;
   }
-  #blog-container {
+  #project-container {
     grid-template-columns: 1fr;
     row-gap: 100px;
   }
@@ -162,22 +162,23 @@ br {
   }
 }
 
-.blog-image {
+.project-image {
   width: 100%;
   height: 55%;
   border-radius: 10px;
   object-fit: cover;
 }
 
-.blog-image:hover {
+.project-image:hover {
   opacity: 0.9;
 }
 
-div#blog-container a {
+div#project-container a {
   text-decoration: none;
+  color: #f7f7f7;
 }
 
-div#blog-container a:hover {
+#project-title h3:hover {
   text-decoration: underline;
   text-decoration-color: #f7f7f7;
 }
@@ -195,14 +196,50 @@ div#blog-container a:hover {
   color: rgb(115, 234, 185);
 }
 
-div#blog-container h3 {
-  color: #f7f7f7;
-  font-size: 2rem;
-  margin-top: 16px;
-  margin-bottom: 0;
+#tag-git-container {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.blog-summary {
+div#project-container h3 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+}
+
+#stacks {
+  margin-top: 5px;
+}
+
+/* #project-title-container .source-code-link {
+} */
+
+.github-logo {
+  width: 20px;
+}
+
+.source-code-link {
+  opacity: 0.6;
+  margin-left: 15px;
+  border: solid #b8b8b8;
+  border-radius: 10px;
+  padding: 3px 5px 3px 5px;
+  display: flex;
+  align-items: center;
+}
+
+.source-code-link:hover {
+  opacity: 1;
+}
+
+.source-code-link p {
+  margin: 0 0 0 5px;
+}
+
+.project-summary {
   color: #f7f7f7;
   font-weight: 200;
   font-size: 1rem;
@@ -216,7 +253,7 @@ div#blog-container h3 {
   font-style: italic;
 }
 
-/* blog pages CSS */
+/* project pages CSS */
 
 #blog-title,
 .blog-content {
