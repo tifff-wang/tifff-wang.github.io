@@ -40,7 +40,7 @@
         Hey, I'm Tiff! I'm a full stack software developer with a background in
         education and digital design. I'm excited about the endless
         possibilities in the tech world and look forward to collaborating with
-        people to create impactful things. Eager to collaborate on something fun
+        people to create impactful things. Eager to work on something fun
         and innovative? Don't hesitate to get in touch. Let's bring ideas to
         life together!
       </h2>
@@ -49,48 +49,78 @@
     <hr />
 
     <main>
-      <div id="blog-container">
+      <div id="project-container">
         <article>
           <a href="/blog/learning-plan.html">
             <img
-              class="blog-image"
+              class="project-image"
               src="images/Tiffs-donut.png"
-              alt="an illustartion of studying coding on the computer"
+              alt="landing page of tiff's donuts website"
             />
           </a>
 
-          <h4 class="core-tag">Team Project</h4>
+          <div id="tag-git-container">
+            <h4 class="core-tag">Team Project</h4>
+            <div id="project-title-container">
+              <a href="#" class="source-code-link">
+                <img
+                  class="github-logo"
+                  src="images/github-mark-white.png"
+                  alt="github logo"
+                />
+                <p>source code</p>
+              </a>
+            </div>
+          </div>
 
-          <a href="/blog/learning-plan.html">
-            <h3>Tiff's Donut</h3>
+          <a href="/blog/learning-plan.html" id="project-title">
+            <h3>Tiff's Donuts</h3>
           </a>
-          <p>
+
+          <p id="stacks">
             <i>
               ( React Three Fibre | React | Tailwind | Playwright | SQLite3 )
             </i>
           </p>
-          <p class="blog-summary">
+          <p class="project-summary">
             A website that allows users to customise their own 3d donuts.
           </p>
-          <p class="date">Sep 14 - 22, 2023</p>
+          <p class="date">Sep 14 - 21, 2023</p>
         </article>
+
         <article>
           <a href="/blog/foundations-reflection.html">
             <img
-              class="blog-image"
-              src="images/reflection.png"
-              alt="an illustartion of a brain"
+              class="project-image"
+              src="images/DescripMini.png"
+              alt="DescripMini prototype"
             />
           </a>
 
-          <h4 class="core-tag">Core</h4>
+          <div id="tag-git-container">
+            <h4 class="tech-tag">Solo Project</h4>
+            <div id="project-title-container">
+              <a href="#" class="source-code-link">
+                <img
+                  class="github-logo"
+                  src="images/github-mark-white.png"
+                  alt="github logo"
+                />
+                <p>source code</p>
+              </a>
+            </div>
+          </div>
 
           <a href="/blog/foundations-reflection.html">
-            <h3>A Reflection on My Foundation Learning</h3>
+            <h3>DescripMini</h3>
           </a>
-          <p class="blog-summary">
-            What a journey it has been! It's time to reflect on what I have
-            learnt from the Foundation core.
+
+          <p id="stacks">
+            <i> ( React | Tailwind | OpenAI API ) </i>
+          </p>
+          <p class="project-summary">
+            Helping users to save time on writing description for their
+            second-hand selling listing.
           </p>
           <p class="date">July 13, 2023</p>
         </article>
@@ -98,28 +128,28 @@
         <article>
           <a href="/blog/problem-solving.html">
             <img
-              class="blog-image"
-              src="images/light-bulb-with-puzzle-pieces.jpg"
-              alt="an illustartion of a light bult with puzzle pieces"
+              class="project-image"
+              src="images/Calculator.png"
+              alt="A Calculator"
             />
           </a>
 
-          <h4 class="tech-tag">Tech</h4>
+          <h4 class="tech-tag">Solo Project</h4>
 
           <a href="/blog/problem-solving.html">
-            <h3>All about problem-solving</h3>
+            <h3>Calculator</h3>
           </a>
-          <p class="blog-summary">
-            Share my insights into problem-solving to my non-tech friend after 4
-            weeks of code learning.
+          <p>
+            <i> ( HTML | CSS | JavaScript ) </i>
           </p>
+          <p class="project-summary">A simple calculator</p>
           <p class="date">July 07, 2023</p>
         </article>
 
         <article>
           <a href="/blog/neuroplasticity.html">
             <img
-              class="blog-image"
+              class="project-image"
               src="images/neurology.jpg"
               alt="an illustartion of a brain"
             />
@@ -130,7 +160,7 @@
           <a href="/blog/neuroplasticity.html">
             <h3>Neuroplasticity and Growth Minset</h3>
           </a>
-          <p class="blog-summary">
+          <p class="project-summary">
             Why being committed to learning and practicing? Neuroplasticity and
             growth mindset would give the answer.
           </p>
@@ -140,7 +170,7 @@
         <article>
           <a href="/blog/javascript-dom.html">
             <img
-              class="blog-image"
+              class="project-image"
               src="images/js-dom.jpg"
               alt="an illustartion of a female teaching some knowledge to another female."
             />
@@ -151,7 +181,7 @@
           <a href="/blog/javascript-dom.html">
             <h3>Introducing JavaScript concepts to my non-tech savvy mum.</h3>
           </a>
-          <p class="blog-summary">
+          <p class="project-summary">
             Try turning JavaScript concepts from complex jargon to friendly
             spells.
           </p>
@@ -161,7 +191,7 @@
         <article>
           <a href="/blog/emotional-intelligence.html">
             <img
-              class="blog-image"
+              class="project-image"
               src="images/positive-mind.jpg"
               alt="an illustartion of girl having a positive mind letter decoration on her hair"
             />
@@ -172,7 +202,7 @@
           <a href="/blog/emotional-intelligence.html">
             <h3>What is Emotional Intelligence?</h3>
           </a>
-          <p class="blog-summary">
+          <p class="project-summary">
             You may be already familiar with IQ, but what is EQ? Why is it
             crucial to our success and overall happiness?
           </p>
@@ -182,7 +212,7 @@
         <article>
           <a href="blog/html-css.html">
             <img
-              class="blog-image"
+              class="project-image"
               src="images/inline-vs-inline-block.png"
               alt="an illustration of inline vs inline-block"
             />
@@ -194,7 +224,7 @@
             <h3>Inline vs inline blocks, what does it mean?</h3>
           </a>
 
-          <p class="blog-summary">
+          <p class="project-summary">
             Inline, block, and inline block sound similar and sometimes can be
             confusing to the newbie frond-end developers. Let's find out the
             differences.
@@ -205,7 +235,7 @@
         <article>
           <a href="/blog/identity-values.html">
             <img
-              class="blog-image"
+              class="project-image"
               src="images/core-values.jpg"
               alt="an illustartion of studying coding on the computer"
             />
@@ -216,7 +246,7 @@
           <a href="/blog/identity-values.html">
             <h3>An in-depth reflection on my values and identity.</h3>
           </a>
-          <p class="blog-summary">
+          <p class="project-summary">
             Identify who I am by answering a series of inspiring questions.
           </p>
           <p class="date">June 23, 2023</p>
