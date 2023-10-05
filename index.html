@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Tiff's Blog</title>
+    <title>Tiff's Portfolio</title>
 
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
@@ -24,7 +24,7 @@
 
         <div class="right-section">
           <ul id="navbar-list">
-            <li><a href="#blog-container">My Works</a></li>
+            <li><a href="#project-container">My Works</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -36,6 +36,7 @@
         <span style="font-style: italic">Tiff'</span>s
         <span id="tech">TECH</span> PORTFOLIO
       </h1>
+
       <h2>
         Hey, I'm Tiff! I'm a full stack software developer with a background in
         education and digital design. I'm excited about the endless
@@ -44,6 +45,21 @@
         innovative? Don't hesitate to get in touch. Let's bring ideas to life
         together!
       </h2>
+
+      <div id="buttons-container">
+        <a
+          href="https://github.com/tifff-wang"
+          id="github-button"
+          target="_blank"
+          >My Github ></a
+        >
+        <a
+          href="./images/doc/Tiffany Wang CV.pdf"
+          id="resume-button"
+          target="_blank"
+          >My Resume ></a
+        >
+      </div>
     </header>
 
     <hr />
@@ -51,13 +67,15 @@
     <main>
       <div id="project-container">
         <article>
-          <a href="/projects/tiffs-donuts.html">
-            <img
-              class="project-image"
-              src="images/Tiffs-donut.png"
-              alt="landing page of tiff's donuts website"
-            />
-          </a>
+          <div class="img-wrapper" id="donut-gif">
+            <a href="/projects/tiffs-donuts.html">
+              <img
+                class="project-image"
+                src="images/Tiffs-donut.png"
+                alt="landing page of tiff's donuts website"
+              />
+            </a>
+          </div>
 
           <div id="tag-git-container">
             <h4 class="core-tag">Team Project</h4>
@@ -68,12 +86,12 @@
                   src="images/github-mark-white.png"
                   alt="github logo"
                 />
-                <p>source code</p>
+                <p>view source code</p>
               </a>
             </div>
           </div>
 
-          <a href="/blog/foundations-reflection.html">
+          <a href="/projects/tiffs-donuts.html">
             <h3>Tiff's Donuts</h3>
           </a>
 
@@ -89,13 +107,15 @@
         </article>
 
         <article>
-          <a href="/blog/foundations-reflection.html">
-            <img
-              class="project-image"
-              src="images/DescripMini.png"
-              alt="DescripMini prototype"
-            />
-          </a>
+          <div class="img-wrapper" id="discripmini-gif">
+            <a href="/projects/descrip-mini.html">
+              <img
+                class="project-image"
+                src="images/DescripMini.png"
+                alt="DescripMini prototype"
+              />
+            </a>
+          </div>
 
           <div id="tag-git-container">
             <h4 class="tech-tag">Solo Project</h4>
@@ -106,17 +126,17 @@
                   src="images/github-mark-white.png"
                   alt="github logo"
                 />
-                <p>source code</p>
+                <p>view source code</p>
               </a>
             </div>
           </div>
 
-          <a href="/blog/foundations-reflection.html">
+          <a href="/projects/descrip-mini.html">
             <h3>DescripMini</h3>
           </a>
 
           <p id="stacks">
-            <i> ( React | Tailwind | OpenAI API ) </i>
+            <i> ( React | OpenAI API | Semantic UI ) </i>
           </p>
           <p class="project-summary">
             Helping users to save time on writing description for their
@@ -126,24 +146,76 @@
         </article>
 
         <article>
-          <a href="/blog/problem-solving.html">
-            <img
-              class="project-image"
-              src="images/Calculator.png"
-              alt="A Calculator"
-            />
-          </a>
+          <div class="img-wrapper" id="calculator-gif">
+            <a href="https://github.com/tifff-wang/calculator" target="_blank">
+              <img
+                class="project-image"
+                src="images/Calculator.png"
+                alt="A Calculator"
+              />
+            </a>
+          </div>
 
-          <h4 class="tech-tag">Solo Project</h4>
+          <div id="tag-git-container">
+            <h4 class="tech-tag">Solo Project</h4>
+            <div id="project-title-container">
+              <a
+                href="https://github.com/tifff-wang/calculator/blob/main/calculator.js"
+                class="source-code-link"
+                target="_blank"
+              >
+                <img
+                  class="github-logo"
+                  src="images/github-mark-white.png"
+                  alt="github logo"
+                />
+                <p>view source code</p>
+              </a>
+            </div>
+          </div>
 
-          <a href="/blog/problem-solving.html">
+          <a href="https://github.com/tifff-wang/calculator" target="_blank">
             <h3>Calculator</h3>
           </a>
-          <p>
-            <i> ( HTML | CSS | JavaScript ) </i>
+
+          <p id="stacks">
+            <i> ( HTML | CSS | Javascript ) </i>
           </p>
-          <p class="project-summary">A simple calculator</p>
-          <p class="date">July 07, 2023</p>
+          <p class="project-summary">
+            Building this calculator has improved my problem-solving and code
+            refactoring skills by thinking and adding functions to solve
+            different edge cases when use a calculator.
+          </p>
+          <p class="date">July 13, 2023</p>
+        </article>
+
+        <article>
+          <div class="img-wrapper" id="design-gif">
+            <a href="https://www.tiffwang.co.nz">
+              <img
+                class="project-image"
+                src="images/design-portfolio-landingpage.png"
+                alt="A landing page"
+              />
+            </a>
+          </div>
+
+          <div id="tag-git-container">
+            <h4 class="core-tag">Design Projects</h4>
+          </div>
+
+          <a href="https://www.tiffwang.co.nz">
+            <h3>The artistic side of me</h3>
+          </a>
+
+          <p id="stacks">
+            <i> ( Webflow | Adobe Creative Suites ) </i>
+          </p>
+          <p class="project-summary">
+            I sometimes put my design hat on. Feel free to check my design
+            portfolio where I showcases my design and study cases.
+          </p>
+          <p class="date">July 13, 2023</p>
         </article>
       </div>
     </main>
@@ -165,7 +237,7 @@
             alt="an email icon"
           />
         </a>
-        <a href="#">
+        <a href="https://github.com/tifff-wang">
           <img
             class="contact-icon"
             src="images/github-mark-white.png"
