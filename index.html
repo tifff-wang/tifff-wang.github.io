@@ -1,275 +1,284 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Tiff's Portfolio</title>
+        <title>Tiff's Portfolio</title>
 
-    <link rel="stylesheet" href="./styles/main.css" />
-  </head>
+        <link rel="stylesheet" href="./styles/main.css" />
+    </head>
 
-  <body>
-    <nav id="navigation">
-      <section class="nav-section">
-        <div class="left-section">
-          <a href="index.html">
-            <img
-              class="logo"
-              src="images/Logo.png"
-              alt="Tiff's personal logo"
-            />
-          </a>
+    <body>
+        <nav id="navigation">
+            <section class="nav-section">
+                <div class="left-section">
+                    <a href="index.html">
+                        <img
+                            class="logo"
+                            src="images/Logo.png"
+                            alt="Tiff's personal logo"
+                        />
+                    </a>
+                </div>
+
+                <div class="right-section">
+                    <ul id="navbar-list">
+                        <li><a href="#project-container">My Works</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </section>
+        </nav>
+
+        <header id="hero">
+            <h1>
+                <span style="font-style: italic">Tiff'</span>s
+                <span id="tech">TECH</span> PORTFOLIO
+            </h1>
+
+            <h2>
+                Hey, I'm Tiff! I'm a full stack software developer with a
+                background in education and digital design. I'm excited about
+                the endless possibilities in the tech world and look forward to
+                collaborating with people to create impactful things. Eager to
+                work on something fun and innovative? Don't hesitate to get in
+                touch. Let's bring ideas to life together!
+            </h2>
+
+            <div id="buttons-container">
+                <a
+                    href="https://github.com/tifff-wang"
+                    id="github-button"
+                    target="_blank"
+                    >My Github ></a
+                >
+                <a
+                    href="https://drive.google.com/file/d/16XF9zBSAEtUWwjU2uzmkEqDqNZIo6p9L/view?usp=sharing"
+                    id="resume-button"
+                    target="_blank"
+                    >My Resume ></a
+                >
+            </div>
+        </header>
+
+        <hr />
+
+        <main>
+            <div id="project-container">
+                <article>
+                    <div class="img-wrapper" id="donut-gif">
+                        <a href="/projects/tiffs-donuts.html">
+                            <img
+                                class="project-image"
+                                src="images/Tiffs-donut.png"
+                                alt="landing page of tiff's donuts website"
+                            />
+                        </a>
+                    </div>
+
+                    <div id="tag-git-container">
+                        <h4 class="core-tag">Team Project</h4>
+                        <div id="project-title-container">
+                            <a
+                                href="http://ec2-3-27-201-205.ap-southeast-2.compute.amazonaws.com/"
+                                class="source-code-link"
+                                target="_blank"
+                            >
+                                <p>check the website</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="/projects/tiffs-donuts.html">
+                        <h3>Tiff's Donuts</h3>
+                    </a>
+
+                    <p id="stacks">
+                        <i>
+                            ( React Three Fiber | React | AWS Cognito | Tailwind
+                            | Playwright | SQLite3 )
+                        </i>
+                    </p>
+                    <p class="project-summary">
+                        A website that allows users to customise their own 3d
+                        donuts.
+                    </p>
+                    <p class="date">Sep 14, 2023 - ongoing</p>
+                </article>
+
+                <article>
+                    <div class="img-wrapper" id="discripmini-gif">
+                        <a href="/projects/descrip-mini.html">
+                            <img
+                                class="project-image"
+                                src="images/DescripMini.png"
+                                alt="DescripMini prototype"
+                            />
+                        </a>
+                    </div>
+
+                    <div id="tag-git-container">
+                        <h4 class="tech-tag">Solo Project</h4>
+                        <div id="project-title-container">
+                            <a
+                                href="https://github.com/tifff-wang/descrip-mini"
+                                class="source-code-link"
+                                target="_blank"
+                            >
+                                <img
+                                    class="github-logo"
+                                    src="images/github-mark-white.png"
+                                    alt="github logo"
+                                />
+                                <p>view source code</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="/projects/descrip-mini.html">
+                        <h3>DescripMini</h3>
+                    </a>
+
+                    <p id="stacks">
+                        <i> ( React | OpenAI API | Tailwind ) </i>
+                    </p>
+                    <p class="project-summary">
+                        Helping users to save time on writing description for
+                        their second-hand selling listing.
+                    </p>
+                    <p class="date">Aug 30 - Sep 15, 2023</p>
+                </article>
+
+                <article>
+                    <div class="img-wrapper" id="calculator-gif">
+                        <a
+                            href="https://github.com/tifff-wang/calculator"
+                            target="_blank"
+                        >
+                            <img
+                                class="project-image"
+                                src="images/Calculator.png"
+                                alt="A Calculator"
+                            />
+                        </a>
+                    </div>
+
+                    <div id="tag-git-container">
+                        <h4 class="tech-tag">Solo Project</h4>
+                        <div id="project-title-container">
+                            <a
+                                href="https://github.com/tifff-wang/calculator/blob/main/calculator.js"
+                                class="source-code-link"
+                                target="_blank"
+                            >
+                                <img
+                                    class="github-logo"
+                                    src="images/github-mark-white.png"
+                                    alt="github logo"
+                                />
+                                <p>view source code</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a
+                        href="https://github.com/tifff-wang/calculator"
+                        target="_blank"
+                    >
+                        <h3>Calculator</h3>
+                    </a>
+
+                    <p id="stacks">
+                        <i> ( HTML | CSS | Javascript ) </i>
+                    </p>
+                    <p class="project-summary">
+                        Building this calculator has improved my problem-solving
+                        and code refactoring skills by thinking and adding
+                        functions to solve different edge cases when use a
+                        calculator.
+                    </p>
+                    <p class="date">July 17 - 19, 2023</p>
+                </article>
+
+                <article>
+                    <div class="img-wrapper" id="design-gif">
+                        <a href="https://www.tiffwang.co.nz" target="_blank">
+                            <img
+                                class="project-image"
+                                src="images/design-portfolio-landingpage.png"
+                                alt="A landing page"
+                            />
+                        </a>
+                    </div>
+
+                    <div id="tag-git-container">
+                        <h4 class="core-tag">Design Projects</h4>
+                        <a
+                            href="https://www.tiffwang.co.nz/"
+                            class="source-code-link"
+                            target="_blank"
+                        >
+                            <p>check the website</p>
+                        </a>
+                    </div>
+
+                    <a href="https://www.tiffwang.co.nz" target="_blank">
+                        <h3>The artistic side of me</h3>
+                    </a>
+
+                    <p id="stacks">
+                        <i> ( Webflow | Adobe Creative Suites ) </i>
+                    </p>
+                    <p class="project-summary">
+                        I sometimes put my design hat on. Feel free to check my
+                        design portfolio where I showcases my design and study
+                        cases.
+                    </p>
+                    <p class="date">ongoing</p>
+                </article>
+            </div>
+        </main>
+
+        <hr />
+
+        <div id="contact">
+            <h3>Contact Me</h3>
+            <p class="contact-message">
+                Keen to share your thoughts with me?<br />
+                Feel free to contact me through email or social media.
+            </p>
+
+            <div class="contact-icons-wrapper">
+                <a href="mailto:thiffanyjun@hotmail.com">
+                    <img
+                        class="contact-icon"
+                        src="images/mail-256.png"
+                        alt="an email icon"
+                    />
+                </a>
+                <a href="https://github.com/tifff-wang" target="_blank">
+                    <img
+                        class="contact-icon"
+                        src="images/github-mark-white.png"
+                        alt="a Github icon"
+                    />
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/tiff-wang-512887274/"
+                    target="_blank"
+                >
+                    <img
+                        class="contact-icon"
+                        src="images/linkedin-3-256.png"
+                        alt="a Linkedin icon"
+                    />
+                </a>
+            </div>
         </div>
 
-        <div class="right-section">
-          <ul id="navbar-list">
-            <li><a href="#project-container">My Works</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </section>
-    </nav>
-
-    <header id="hero">
-      <h1>
-        <span style="font-style: italic">Tiff'</span>s
-        <span id="tech">TECH</span> PORTFOLIO
-      </h1>
-
-      <h2>
-        Hey, I'm Tiff! I'm a full stack software developer with a background in
-        education and digital design. I'm excited about the endless
-        possibilities in the tech world and look forward to collaborating with
-        people to create impactful things. Eager to work on something fun and
-        innovative? Don't hesitate to get in touch. Let's bring ideas to life
-        together!
-      </h2>
-
-      <div id="buttons-container">
-        <a
-          href="https://github.com/tifff-wang"
-          id="github-button"
-          target="_blank"
-          >My Github ></a
-        >
-        <a
-          href="./images/doc/Tiffany-Wang-CV.pdf"
-          id="resume-button"
-          target="_blank"
-          >My Resume ></a
-        >
-      </div>
-    </header>
-
-    <hr />
-
-    <main>
-      <div id="project-container">
-        <article>
-          <div class="img-wrapper" id="donut-gif">
-            <a href="/projects/tiffs-donuts.html">
-              <img
-                class="project-image"
-                src="images/Tiffs-donut.png"
-                alt="landing page of tiff's donuts website"
-              />
-            </a>
-          </div>
-
-          <div id="tag-git-container">
-            <h4 class="core-tag">Team Project</h4>
-            <div id="project-title-container">
-              <a
-                href="http://ec2-3-27-201-205.ap-southeast-2.compute.amazonaws.com/"
-                class="source-code-link"
-                target="_blank"
-              >
-                <p>check the website</p>
-              </a>
-            </div>
-          </div>
-
-          <a href="/projects/tiffs-donuts.html">
-            <h3>Tiff's Donuts</h3>
-          </a>
-
-          <p id="stacks">
-            <i>
-              ( React Three Fiber | React | AWS Cognito | Tailwind | Playwright
-              | SQLite3 )
-            </i>
-          </p>
-          <p class="project-summary">
-            A website that allows users to customise their own 3d donuts.
-          </p>
-          <p class="date">Sep 14, 2023 - ongoing</p>
-        </article>
-
-        <article>
-          <div class="img-wrapper" id="discripmini-gif">
-            <a href="/projects/descrip-mini.html">
-              <img
-                class="project-image"
-                src="images/DescripMini.png"
-                alt="DescripMini prototype"
-              />
-            </a>
-          </div>
-
-          <div id="tag-git-container">
-            <h4 class="tech-tag">Solo Project</h4>
-            <div id="project-title-container">
-              <a
-                href="https://github.com/tifff-wang/descrip-mini"
-                class="source-code-link"
-                target="_blank"
-              >
-                <img
-                  class="github-logo"
-                  src="images/github-mark-white.png"
-                  alt="github logo"
-                />
-                <p>view source code</p>
-              </a>
-            </div>
-          </div>
-
-          <a href="/projects/descrip-mini.html">
-            <h3>DescripMini</h3>
-          </a>
-
-          <p id="stacks">
-            <i> ( React | OpenAI API | Tailwind ) </i>
-          </p>
-          <p class="project-summary">
-            Helping users to save time on writing description for their
-            second-hand selling listing.
-          </p>
-          <p class="date">Aug 30 - Sep 15, 2023</p>
-        </article>
-
-        <article>
-          <div class="img-wrapper" id="calculator-gif">
-            <a href="https://github.com/tifff-wang/calculator" target="_blank">
-              <img
-                class="project-image"
-                src="images/Calculator.png"
-                alt="A Calculator"
-              />
-            </a>
-          </div>
-
-          <div id="tag-git-container">
-            <h4 class="tech-tag">Solo Project</h4>
-            <div id="project-title-container">
-              <a
-                href="https://github.com/tifff-wang/calculator/blob/main/calculator.js"
-                class="source-code-link"
-                target="_blank"
-              >
-                <img
-                  class="github-logo"
-                  src="images/github-mark-white.png"
-                  alt="github logo"
-                />
-                <p>view source code</p>
-              </a>
-            </div>
-          </div>
-
-          <a href="https://github.com/tifff-wang/calculator" target="_blank">
-            <h3>Calculator</h3>
-          </a>
-
-          <p id="stacks">
-            <i> ( HTML | CSS | Javascript ) </i>
-          </p>
-          <p class="project-summary">
-            Building this calculator has improved my problem-solving and code
-            refactoring skills by thinking and adding functions to solve
-            different edge cases when use a calculator.
-          </p>
-          <p class="date">July 17 - 19, 2023</p>
-        </article>
-
-        <article>
-          <div class="img-wrapper" id="design-gif">
-            <a href="https://www.tiffwang.co.nz" target="_blank">
-              <img
-                class="project-image"
-                src="images/design-portfolio-landingpage.png"
-                alt="A landing page"
-              />
-            </a>
-          </div>
-
-          <div id="tag-git-container">
-            <h4 class="core-tag">Design Projects</h4>
-            <a
-              href="https://www.tiffwang.co.nz/"
-              class="source-code-link"
-              target="_blank"
-            >
-              <p>check the website</p>
-            </a>
-          </div>
-
-          <a href="https://www.tiffwang.co.nz" target="_blank">
-            <h3>The artistic side of me</h3>
-          </a>
-
-          <p id="stacks">
-            <i> ( Webflow | Adobe Creative Suites ) </i>
-          </p>
-          <p class="project-summary">
-            I sometimes put my design hat on. Feel free to check my design
-            portfolio where I showcases my design and study cases.
-          </p>
-          <p class="date">ongoing</p>
-        </article>
-      </div>
-    </main>
-
-    <hr />
-
-    <div id="contact">
-      <h3>Contact Me</h3>
-      <p class="contact-message">
-        Keen to share your thoughts with me?<br />
-        Feel free to contact me through email or social media.
-      </p>
-
-      <div class="contact-icons-wrapper">
-        <a href="mailto:thiffanyjun@hotmail.com">
-          <img
-            class="contact-icon"
-            src="images/mail-256.png"
-            alt="an email icon"
-          />
-        </a>
-        <a href="https://github.com/tifff-wang" target="_blank">
-          <img
-            class="contact-icon"
-            src="images/github-mark-white.png"
-            alt="a Github icon"
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/tiff-wang-512887274/"
-          target="_blank"
-        >
-          <img
-            class="contact-icon"
-            src="images/linkedin-3-256.png"
-            alt="a Linkedin icon"
-          />
-        </a>
-      </div>
-    </div>
-
-    <footer>
-      <p>©Copyright 2023 by Tiffany Wang. All rights reserved.</p>
-    </footer>
-  </body>
+        <footer>
+            <p>©Copyright 2023 by Tiffany Wang. All rights reserved.</p>
+        </footer>
+    </body>
 </html>
