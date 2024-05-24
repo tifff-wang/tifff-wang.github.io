@@ -1,140 +1,149 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Tiff's Donuts</title>
+        <title>Tiff's Donuts</title>
 
-    <link rel="stylesheet" href="../styles/main.css" />
-  </head>
+        <link rel="stylesheet" href="../styles/main.css" />
+    </head>
 
-  <body>
-    <nav id="navigation">
-      <section class="nav-section">
-        <div class="left-section">
-          <a href="../index.html">
-            <img
-              class="logo"
-              src="../images/Logo.png"
-              alt="Tiff's personal logo"
-            />
-          </a>
+    <body>
+        <nav id="navigation">
+            <section class="nav-section">
+                <div class="left-section">
+                    <a href="../index.html">
+                        <img
+                            class="logo"
+                            src="../images/Logo.png"
+                            alt="Tiff's personal logo"
+                        />
+                    </a>
+                </div>
+
+                <div class="right-section">
+                    <ul id="navbar-list">
+                        <li>
+                            <a
+                                href="http://tifff-wang.github.io/#project-containerr"
+                                >My Works</a
+                            >
+                        </li>
+                        <li>
+                            <a href="http://tifff-wang.github.io/#contact"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </nav>
+
+        <header id="project-title">
+            <p>Sep 14, 2023 - ongoing</p>
+            <h1>Tiff's Donuts 🍩</h1>
+        </header>
+
+        <article class="project-content">
+            <h2>Project links</h2>
+            <ul class="project-links">
+                <li>
+                    <a
+                        href="https://github.com/tifff-wang/Tiffs-3D-Donuts-ThreeJS/tree/deploy"
+                        target="_blank"
+                    >
+                        <p>View source code ></p>
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="http://ec2-3-27-201-205.ap-southeast-2.compute.amazonaws.com/"
+                        target="_blank"
+                    >
+                        <p>Check the website ></p>
+                    </a>
+                </li>
+            </ul>
+            <h2>Project Demo</h2>
+            <video controls="controls">
+                <source src="../images/Tiff-donut demo.mp4" type="video/mp4" />
+            </video>
+            <h2>Recent update</h2>
+            <p>
+                I have recently refined the website UI and implement AWS Cognito
+                as authentication method instead of the previous AuthO. The web
+                is hosted on AWS EC2.
+            </p>
+
+            <h2>Project Overview</h2>
+
+            <p>
+                Tiff's Donuts is my final group project from Dev Academy. During
+                this project, I acted as the Product Owner with five other team
+                members where we developed a web application where users could
+                design and customise 3D donuts. The website includes rendering
+                3D models, interactions and scrolling effects using threeJS and
+                React. During this intensive 7-day project, I had the
+                opportunity to take the lead in introducing and implementing
+                React Three Fiber, a technology not covered in our bootcamp.
+                This experience was truly valuable as it showcased our team's
+                dedication to collaborative problem-solving and our ability to
+                adapt and learn on the fly.
+            </p>
+
+            <h2>Tech Stacks</h2>
+            <p>
+                <i
+                    >React Three Fiber(Drei) | React (Vite) | TailwindCSS | AWS
+                    Cognito
+                    <br />
+                    React Router | SuperAgent | Vitest | PlayWright</i
+                >
+            </p>
+        </article>
+
+        <hr />
+
+        <div id="contact">
+            <h2>Contact Me</h2>
+            <p class="contact-message">
+                Keen to share your thoughts with me?<br />
+                Feel free to contact me through email or social media.
+            </p>
+            <div class="contact-icons-wrapper">
+                <a href="mailto:thiffanyjun@hotmail.com">
+                    <img
+                        class="contact-icon"
+                        src="../images/mail-256.png"
+                        alt="an email icon"
+                    />
+                </a>
+                <a href="#">
+                    <img
+                        class="contact-icon"
+                        src="../images/github-mark-white.png"
+                        alt="a Github icon"
+                    />
+                </a>
+                <a href="https://www.linkedin.com/in/tiff-wang-512887274/">
+                    <img
+                        class="contact-icon"
+                        src="../images/linkedin-3-256.png"
+                        alt="a Linkedin icon"
+                    />
+                </a>
+            </div>
         </div>
 
-        <div class="right-section">
-          <ul id="navbar-list">
-            <li>
-              <a href="http://tifff-wang.github.io/#blog-container">My Blogs</a>
-            </li>
-            <li><a href="http://tifff-wang.github.io/#contact">Contact</a></li>
-          </ul>
-        </div>
-      </section>
-    </nav>
+        <aside>
+            <a href="#project-title">
+                <button>back to top</button>
+            </a>
+        </aside>
 
-    <header id="project-title">
-      <p>Sep 14, 2023 - ongoing</p>
-      <h1>Tiff's Donuts 🍩</h1>
-    </header>
-
-    <article class="project-content">
-      <h2>Project links</h2>
-      <ul class="project-links">
-        <li>
-          <a
-            href="https://github.com/tifff-wang/Tiffs-3D-Donuts-ThreeJS/tree/deploy"
-            target="_blank"
-          >
-            <p>View source code ></p>
-          </a>
-        </li>
-        <li>
-          <a
-            href="http://ec2-3-27-201-205.ap-southeast-2.compute.amazonaws.com/"
-            target="_blank"
-          >
-            <p>Check the website ></p>
-          </a>
-        </li>
-      </ul>
-      <h2>Project Demo</h2>
-      <video controls="controls">
-        <source src="../images/Tiff-donut demo.mp4" type="video/mp4" />
-      </video>
-      <h2>Recent update</h2>
-      <p>
-        I have recently refined the website UI and implement AWS Cognito as
-        authentication method instead of the previous AuthO. The web is hosted
-        on AWS EC2.
-      </p>
-
-      <h2>Project Overview</h2>
-
-      <p>
-        Tiff's Donuts is my final group project from Dev Academy. During this
-        project, I acted as the Product Owner with five other team members where
-        we developed a web application where users could design and customise 3D
-        donuts. The website includes rendering 3D models, interactions and
-        scrolling effects using threeJS and React. During this intensive 7-day
-        project, I had the opportunity to take the lead in introducing and
-        implementing React Three Fiber, a technology not covered in our
-        bootcamp. This experience was truly valuable as it showcased our team's
-        dedication to collaborative problem-solving and our ability to adapt and
-        learn on the fly.
-      </p>
-
-      <h2>Tech Stacks</h2>
-      <p>
-        <i
-          >React Three Fiber(Drei) | React (Vite) | TailwindCSS | AWS Cognito
-          <br />
-          React Router | SuperAgent | Vitest | PlayWright</i
-        >
-      </p>
-    </article>
-
-    <hr />
-
-    <div id="contact">
-      <h2>Contact Me</h2>
-      <p class="contact-message">
-        Keen to share your thoughts with me?<br />
-        Feel free to contact me through email or social media.
-      </p>
-      <div class="contact-icons-wrapper">
-        <a href="mailto:thiffanyjun@hotmail.com">
-          <img
-            class="contact-icon"
-            src="../images/mail-256.png"
-            alt="an email icon"
-          />
-        </a>
-        <a href="#">
-          <img
-            class="contact-icon"
-            src="../images/github-mark-white.png"
-            alt="a Github icon"
-          />
-        </a>
-        <a href="https://www.linkedin.com/in/tiff-wang-512887274/">
-          <img
-            class="contact-icon"
-            src="../images/linkedin-3-256.png"
-            alt="a Linkedin icon"
-          />
-        </a>
-      </div>
-    </div>
-
-    <aside>
-      <a href="#project-title">
-        <button>back to top</button>
-      </a>
-    </aside>
-
-    <footer>
-      <p>©Copyright 2023 by Tiffany Wang. All rights reserved.</p>
-    </footer>
-  </body>
+        <footer>
+            <p>©Copyright 2023 by Tiffany Wang. All rights reserved.</p>
+        </footer>
+    </body>
 </html>
