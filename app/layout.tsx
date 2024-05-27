@@ -1,4 +1,7 @@
-import '../../styles/main.css'
+import Navbar from "@/components/navbar"
+import '../styles/styles.css'
+import Footer from "@/components/footer"
+
 
 export default function RootLayout({
     children,
@@ -22,7 +25,9 @@ export default function RootLayout({
                 <meta name="description" content="Web site created..." />
             </head>
             <body>
-                <div id="root">{children}</div>
+                <Navbar />
+                <main>{children}</main>
+                <Footer />
             </body>
         </html>
     )
