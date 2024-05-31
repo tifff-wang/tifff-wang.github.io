@@ -1,12 +1,14 @@
+'use client'
+
 function Navbar() {
     return (
         <nav id="navigation">
             <section className="nav-section">
                 <div className="left-section">
-                    <a href="index.html">
+                    <a href="/">
                         <img
                             className="logo"
-                            src="images/logo.png"
+                            src="/images/logo.png"
                             alt="Tiff's personal logo"
                         />
                     </a>
@@ -15,7 +17,10 @@ function Navbar() {
                 <div className="right-section">
                     <ul id="navbar-list">
                         <li>
-                            <a href="#project-container">My Works</a>
+                            <a href="/project">My Works</a>
+                        </li>
+                        <li>
+                            <a href="/about">About</a>
                         </li>
                         <li>
                             <a href="#contact">Contact</a>

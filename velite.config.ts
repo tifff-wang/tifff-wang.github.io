@@ -14,12 +14,15 @@ const projects = defineCollection({
             slug: s.path(),
             description: s.string().max(999).optional(),
             date: s.isodate(),
-            cover: s.image(),
-            video: s.file().optional(),
+            cover: s.string(),
+            stacks: s.string(),
+            website: s.string(),
+            github: s.string(),
             metadata: s.metadata(),
             excerpt: s.excerpt(),
             content: s.markdown(),
             published: s.boolean().default(true),
+            code: s.mdx()
         })
         .transform(computedFields),
 })
