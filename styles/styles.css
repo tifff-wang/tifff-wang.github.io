@@ -519,19 +519,63 @@ td {
 
 /* aws projects */
 
-.aws-projects-container{
-  width:80%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.aws-projects-container {
+    margin: auto;
+    margin-top: 120px;
+    width: 90%;
 }
 
+.aws-project-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left:0;
+    gap: 40px;
+   
+}
 
+.aws-project-item-container {
+    width: 250px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
 
+.aws-img-container {
+    width: 100%;
+}
 
+.aws-project-image {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+}
 
+.aws-project-image:hover {
+    opacity: 0.8;
+    scale: calc(1.02);
+}
 
+.aws-project-info-container {
+    margin-left: 10px;
+}
 
+.aws-info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.aws-date {
+    margin-top: 0;
+    font-size: 0.75rem;
+}
+
+.aws-services {
+    font-weight: 600;
+}
 
 /* contact and footer CSS */
 #contact {

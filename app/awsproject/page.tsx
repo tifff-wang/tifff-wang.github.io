@@ -1,8 +1,9 @@
 import { awsprojects } from '#site/content'
 import AWSProjectItem from '@/components/aws-project-item'
+import { sortProjects } from '@/lib/utils'
 
 async function AWSProjectPage() {
-    const sortedProjects = awsprojects.filter((project) => project.published)
+    const sortedProjects = sortProjects(awsprojects.filter((project) => project.published))
 
     return (
         <div className="aws-projects-container">
