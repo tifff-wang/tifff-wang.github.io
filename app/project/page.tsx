@@ -1,5 +1,5 @@
 import { projects } from '#site/content'
-import PostItem from '@/components/project-item'
+import ProjectItem from '@/components/project-item'
 import { sortProjects } from '@/lib/utils'
 
 async function ProjectPage() {
@@ -23,11 +23,8 @@ async function ProjectPage() {
                             cover,
                         } = project
                         return (
-                            <li
-                                key={slug}
-                               
-                            >
-                                <PostItem
+                            <li key={slug}>
+                                <ProjectItem
                                     slug={slug}
                                     date={date}
                                     description={description}
@@ -36,7 +33,7 @@ async function ProjectPage() {
                                     website={website}
                                     github={github}
                                     cover={cover}
-                                    index ={index}
+                                    index={index}
                                 />
                             </li>
                         )

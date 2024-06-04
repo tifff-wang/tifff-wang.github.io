@@ -517,6 +517,22 @@ td {
     }
 }
 
+/* aws projects */
+
+.aws-projects-container{
+  width:80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
 /* contact and footer CSS */
 #contact {
     color: #f7f7f7;
