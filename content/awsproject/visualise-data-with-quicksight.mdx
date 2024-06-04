@@ -1,0 +1,77 @@
+---
+title: Visualise Netflix Data using Amazon QuickSight
+date: 2024-04-30
+cover: images/aws-images/QuickSight.png
+services: Amazon QuickSight
+published: true
+---
+
+##### April 2024
+
+# How I used Amazon QuickSight to visualise Netflix's catalogue trends?
+
+In this project, I learned how to:
+
+-   💡 Connect datasets to Amazon QuickSight for analysis.
+-   💡 Create visualisations like donut charts, bar graphs, and tables.
+-   💡 Using QuickSight's functionalities to visual answers to more complex data questions.
+
+## Step 1: Create a S3 bucket and upload files
+
+After creating the bucket I uploaded 2 files:
+
+1. a csv file
+2. a manifest.json file
+
+<img
+    src="/images/aws-images/quicksight/s3-bucket-screenshot.png"
+    alt="screenshot of s3 bucke with 2 files"
+/>
+
+### Key notes ✨:
+
+-   #### About the manifest.json file
+
+<img
+    src="/images/aws-images/quicksight/manifest.png"
+    alt="screenshot of manifest code"
+/>
+
+In the manifest.json file, I input the netflix csv file's URL to the URIs in order to allow the QuickSight to link to this SVC file later on.file is like a map that tells Amazon QuickSight where your data files are and how they're organised. It also describes what each piece of data looks like, so QuickSight knows how to understand the data and show it in charts or graphs
+
+## Step 2: Sign up to the QuickSight
+
+Just navigate to the Amazon QuickSight and follow the sign up steps.
+Make sure S3 is selected as a resource that QuickSight has access to, and select your S3 bucket.
+
+<img
+    src="/images/aws-images/quicksight/sign-up-quicksight.png"
+    alt="screenshot of a quick sight sign up successful page"
+/>
+## Step 3: Connect QuickSight to the S3 bucket
+
+In the QuickSight menu, navigate to Datasets and create a new dataset using S3 data.
+Enter the S3 URL to your "manifest.json" file
+
+<img
+    src="/images/aws-images/quicksight/dataset-creation.png"
+    alt="screenshot of dataset setup successful page"
+/>
+
+## Step 4: Time to Create Visualisation
+
+QuickSight can sort, filter, and customise data with a varitey of visualisation typs like bar charts, pie charts, line graphs, etc, through manipulating the left-hand side panel.
+
+<img
+    src="/images/aws-images/quicksight/quicksight-panel.png"
+    alt="screenshot of the quicksight panel dashboard"
+/>
+Here's the one big dashboard that I created that visualised the Netflix's catalogue
+trends in different ways.
+
+<img
+    src="/images/aws-images/quicksight/data-dashboard.png"
+    alt="screenshot of a data dashboard that visualise the neflix data analysis"
+/>
+
+#### Big thanks to [@NextWork](https://www.nextwork.org/) for setting up this engaging challenge!
