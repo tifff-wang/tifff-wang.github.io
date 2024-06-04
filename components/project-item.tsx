@@ -10,15 +10,20 @@ interface ProjectItemProps {
     stacks: string
     website: string
     github: string
+    index: number
 }
 
 function ProjectItem(props: ProjectItemProps) {
-    const { slug, title, description, date, cover, stacks, website, github } =
+    const { slug, title, description, date, cover, stacks, website, github, index } =
         props
 
     return (
-        <article className="project-item-container">
-            <div className="img-wrapper">
+        <article
+            className="project-item-container"
+        >
+            <div
+                className="img-container"
+            >
                 <img className="project-image" id="" src={cover} alt="" />
             </div>
 

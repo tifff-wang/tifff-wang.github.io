@@ -9,12 +9,9 @@ async function ProjectPage() {
     const displayProjects = sortedProjects
     return (
         <div className="projects-container">
-            <div>
-                <h1>My Projects</h1>
-            </div>
             {displayProjects?.length > 0 ? (
                 <ul className="project-list">
-                    {displayProjects.map((project) => {
+                    {displayProjects.map((project, index) => {
                         const {
                             slug,
                             date,
@@ -26,7 +23,10 @@ async function ProjectPage() {
                             cover,
                         } = project
                         return (
-                            <li key={slug}>
+                            <li
+                                key={slug}
+                               
+                            >
                                 <PostItem
                                     slug={slug}
                                     date={date}
@@ -36,6 +36,7 @@ async function ProjectPage() {
                                     website={website}
                                     github={github}
                                     cover={cover}
+                                    index ={index}
                                 />
                             </li>
                         )
