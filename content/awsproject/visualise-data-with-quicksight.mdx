@@ -28,16 +28,23 @@ After creating the bucket I uploaded 2 files:
     alt="screenshot of s3 bucke with 2 files"
 />
 
-### Key notes ✨:
-
--   #### About the manifest.json file
+<HighlightBlock color="#f9e4ff">
+    <h3>Key notes ✏️:</h3>
+    <h4>About the manifest.json file</h4>
+    <p>
+        In the manifest.json file as shown below, I input the netflix csv file's
+        URL to the URIs in order to allow the QuickSight to link to this SVC
+        file later on.file is like a map that tells Amazon QuickSight where your
+        data files are and how they're organised. It also describes what each
+        piece of data looks like, so QuickSight knows how to understand the data
+        and show it in charts or graphs
+    </p>
+</HighlightBlock>
 
 <img
     src="/images/aws-images/quicksight/manifest.png"
     alt="screenshot of manifest code"
 />
-
-In the manifest.json file, I input the netflix csv file's URL to the URIs in order to allow the QuickSight to link to this SVC file later on.file is like a map that tells Amazon QuickSight where your data files are and how they're organised. It also describes what each piece of data looks like, so QuickSight knows how to understand the data and show it in charts or graphs
 
 ## Step 2: Sign up to the QuickSight
 
@@ -48,6 +55,7 @@ Make sure S3 is selected as a resource that QuickSight has access to, and select
     src="/images/aws-images/quicksight/sign-up-quicksight.png"
     alt="screenshot of a quick sight sign up successful page"
 />
+
 ## Step 3: Connect QuickSight to the S3 bucket
 
 In the QuickSight menu, navigate to Datasets and create a new dataset using S3 data.

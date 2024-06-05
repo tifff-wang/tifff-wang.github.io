@@ -25,14 +25,21 @@ In this project, I:
 
 Make sure **ACLs, public access and bucket versioning** are enabled.
 
-### Key notes ✨:
+<HighlightBlock color="#f9e4ff">
+    <h3>Key notes ✏️:</h3>
+    <h4>What's ACL?</h4>
+    <p>
+        Access control list - A set of rules that decides who can get access to
+        a resource.
+    </p>
 
--   #### What's ACL?
-
-    Access control list - A set of rules that decides who can get access to a resource.
-
--   #### Why need a unique bucket name?
-    An S3 bucket name is globally unique, and all AWS accounts share the namespace. After you create a bucket, no other AWS accounts in the entire world can use your bucket's name unless you delete the bucket.
+    <h4>Why need a unique bucket name?</h4>
+    <p>
+        An S3 bucket name is globally unique, and all AWS accounts share the
+        namespace. After you create a bucket, no other AWS accounts in the
+        entire world can use your bucket's name unless you delete the bucket.
+    </p>
+</HighlightBlock>
 
 ## Step 2: Upload website files into the bucket
 
@@ -53,12 +60,6 @@ Scroll allllllllll the way down to the **Static website hosting** panel to enalb
     src="/images/aws-images/web-host-s3/web-hosting-form.png"
     alt="screenshot of bucket versioning"
 />
-
-### Key notes ✨:
-
--   #### Why hosting?
-
-Hosting helps to make your website public on the internet. Before hosting, you can only view your website on your own computer. With website hosting, you get a URL for others to click and view your website online!
 
 ## Step 4: Add bucket versioning
 
