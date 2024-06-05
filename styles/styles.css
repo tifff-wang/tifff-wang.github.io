@@ -117,6 +117,7 @@ ul#navbar-list li a:hover {
     }
     100% {
         color: rgb(233, 160, 255);
+        color: #f9e4ff;
     }
 }
 
@@ -438,8 +439,8 @@ h1 {
 .project-content ol li,
 .project-content ul li {
     font-size: 1rem;
-    line-height: 1rem;
-    font-weight: 200;
+    line-height: 1.2rem;
+    font-weight: 300;
     margin-bottom: 24px;
 }
 
@@ -450,6 +451,15 @@ h1 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.project-content .img-small {
+    width: 45%;
+    height: auto;
+}
+
+.project-content .error-section{
+  color:red;
 }
 
 video {
@@ -530,9 +540,8 @@ td {
     flex-direction: row;
     flex-wrap: wrap;
     list-style-type: none;
-    padding-left:0;
+    padding-left: 0;
     gap: 40px;
-   
 }
 
 .aws-project-item-container {
@@ -549,7 +558,7 @@ td {
 
 .aws-project-image {
     width: 100%;
-    height:310px;
+    height: 310px;
     border-radius: 10px;
     object-fit: cover;
     cursor: pointer;

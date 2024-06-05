@@ -1,9 +1,24 @@
 import * as runtime from 'react/jsx-runtime'
-import Image from "next/image"
+import Image from 'next/image'
+
+const HighlightBlock = ({ children, color = 'yellow' }) => (
+    <div
+        style={{
+            backgroundColor: color,
+            padding:"5px 20px 20px 20px",
+            margin:"auto",
+            borderRadius: '5px',
+            color: 'black',
+            width:"80%"
+        }}
+    >
+        {children}
+    </div>
+)
 
 const sharedComponents = {
-  Image,
-  
+    Image,
+    HighlightBlock,
     // Add your global components here
 }
 

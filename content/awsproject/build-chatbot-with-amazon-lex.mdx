@@ -6,6 +6,340 @@ services: Amazon Lex, Lambda
 published: true
 ---
 
-##### April 2024
+##### May 2024
 
-# How I Visualise Netflix Data using Amazon QuickSight
+# How I Build a Chatbot with Amazon Lex and Lambda in 9 Steps
+
+In this project, I used Amazon Lex to create a practical chatbot,
+BankerBot, to help the imaginary bank's customers **check account balance** and **transfer
+money between accounts**.
+
+## Here are some key concepts to review at the end of the project:
+
+-   💡 Idle session timeout
+-   💡 confidence score threshold
+-   💡 intents
+-   💡 utterance
+-   💡 fallbackIntent
+-   💡 slots
+-   💡 Lambda function
+-   💡 Alias
+
+## Step 1: Create a bot
+
+1.  Navigate to Amazon Lex and click **"Create Bot"**
+2.  Choose **"Create a role with basic Amazon Lex permissions"**, This will create a policy that gives Amazon Lex permissions to call other AWS services, such as Lambda.
+3.  Setup **Idle session timeout**. If you set idle session to 5 mins, that means the user's chatbot will end if he/her is idle or does not provide any input for 5 mins.
+
+<img
+    src="/images/aws-images/amazon-lex/voice-interaction.png"
+    alt="screenshot of chatbot language set up page"
+/>
+
+4.  Setup language, voice interaction and confidence score threshold.
+5.  Done!
+
+<HighlightBlock color="#f9e4ff">
+    <h3>Key notes ✨:</h3>
+    <h4>What's confidence score threshold?</h4>
+    <p>
+        The threshold score determins how confident the chatbot to understand
+        user's input. A score of 0.4 means that the chatbot is at least 40%
+        confident to understands what the user is asking. So if a user's input
+        is ambiguous and the chatbot's confidence score is below 0.4, it will
+        throw an error message.
+    </p>
+</HighlightBlock>
+
+## Step 2: Create a Welcoming Intent
+
+This intent is to let the chatbot welcomes a user when they say hello.
+
+1. Add some sample utterances:
+
+    - Hi
+    - Hello
+    - I need help
+    - Can you help me?
+
+2. Add the closing response to tell the bot what to respond to those utterances:
+
+    - Hi! I'm BB, the Banking Bot. How can I help you today?
+
+3. Time to build and test the bot.
+
+<img
+    src="/images/aws-images/amazon-lex/before-fallbackIntent.png"
+    alt="screenshot of chatbot language set up page"
+    className="img-small"
+/>
+
+It can be seen that the bot is able to understand some of the phrase twist. But the input like "hey" is outside of the bot's confident score to understand. Next, we need to tell the bot what to respond if it doesn't understand user's intent.
+
+## Step 3: Setup FallbackIntent
+
+To offer helpful prompts when the bot fails to understand the user, a FallbackIntent is setup for the bot to seek clarification.
+
+1. Change FallbackIntent's closing response.
+
+2. Time to build and test the bot again
+
+<img
+    src="/images/aws-images/amazon-lex/after-fallbackIntent.png"
+    alt="screenshot of chatbot chat with fallbackIntent implementation"
+    className="img-small"
+/>
+
+## Step 4: Create Slot Types
+
+In order to know which account a user wants to check, we need to set up slots that tells the bot what information we need to gather from the user.
+
+<img
+    src="/images/aws-images/amazon-lex/add-slot-types.png"
+    alt="screenshot of seleting the slot type on panel"
+/>
+
+<HighlightBlock color="#f9e4ff">
+    <h3>Key notes ✨:</h3>
+    <h4>What are slots?</h4>
+    <p>
+        Slots are information that a chatbot requires to fulfill a user's
+        request, similar to filling out a form. For instance, to book a
+        restaurant table, a chatbot needs details such as the restaurant name,
+        date, time, and party size.
+    </p>
+</HighlightBlock>
+
+For this banker bot, I created a slot called **"AccountType"** that includes:
+
+-   Checking
+-   Savings
+-   Credit
+
+<img
+    src="/images/aws-images/amazon-lex/slots1.png"
+    alt="screenshot of the slot setup"
+/>
+
+Now the slots are ready, time to build the intent for checking balance in the specified account type.
+
+## Step 5: Create the CheckBalance intent
+
+1. Create a CheckBalance intent.
+
+2. Add sample utterances:
+
+<img
+    src="/images/aws-images/amazon-lex/set-up-utterances.png"
+    alt="screenshot of utterances setup"
+/>
+
+You'll notice that some of the utterances contains \{accountTypes\}. This is to trigger the Amazon Lex to look for slot values from the user's input.
+
+3. Add the "AccountType" slot to the intent's slots with prompts.
+4. Create another slot to get the user's birthday for verification purpose.
+
+<img
+    src="/images/aws-images/amazon-lex/slots2.png"
+    alt="screenshot of the check balance intent slot setup"
+/>
+
+5. Time to build and test:
+
+<img
+    src="/images/aws-images/amazon-lex/intent-check-1.png"
+    alt="screenshot of chatbot language set up page"
+    className="img-small"
+/>
+
+## Step 6: Create a Lambda Function to Get Account Balance
+
+<HighlightBlock color="#f9e4ff">
+    <h3>Key notes ✨:</h3>
+    <h4>What is Lambda?</h4>
+    <p>
+        AWS Lambda is a serverless service that lets you run code without
+        provisioning or managing servers. It's hightly scalable!
+    </p>
+</HighlightBlock>
+
+Here, I'll use Lambda function to help me get the user's account balance.
+
+1. Create a Lambda function from scratch and deploy the code:
+
+<img
+    src="/images/aws-images/amazon-lex/lambda-function.png"
+    alt="screenshot of lambda function with deployed python code"
+/>
+
+2. Connect AWS Lambda with Amazon Lex
+
+-   Find the Alias on the left-side panel of the Lex console page and connect to the Lambda Function that just setup.
+
+<img
+    src="/images/aws-images/amazon-lex/Alias.png"
+    alt="screenshot of alias setup page"
+/>
+
+<HighlightBlock color="#f9e4ff">
+    <h3>Key notes ✨:</h3>
+    <h4>What is Alias?</h4>
+    <p>
+        Alias in Amazon Lex is like a pointer that points to a specific version
+        of your bot. Saving your time in manually updating the connection to the
+        newest version of the bot and telling other AWS services which version
+        of the bot to connect.
+    </p>
+</HighlightBlock>
+
+3. Connect the CheckBalance intent with the Lambda function
+    - In the CheckBalance intent, update the Fulfilment setting.
+
+<HighlightBlock color="#f9e4ff">
+    <h3>Key notes ✨:</h3>
+    <h4>What is fulfilment?</h4>
+    <p>
+        In Amazon Lex, fulfilment means completing the intent. After the bot
+        received a user's account and the birthday for verification, the bot has
+        all the information it needs and moves to fulfilment. This is where it
+        will use the Lambda function to get the account balance and pass it back
+        to the user.
+    </p>
+</HighlightBlock>
+
+-   Within the fulfilment panel, activate the setting to Use a Lambda function for fulfilment.
+
+<img
+    src="/images/aws-images/amazon-lex/fullfilment.png"
+    alt="screenshot of fullfilment setting"
+/>
+
+4.  Time to build and test!
+
+<img
+    src="/images/aws-images/amazon-lex/check-saving-account.png"
+    alt="screenshot of the chat for check the saving account"
+    className="img-small"
+/>
+
+## Step 6: Create the Output Context from CheckBalance
+
+What if a user wants to continue to check other accounts' balances? How can we let the Chatbot skip the step of checking the birthday?
+
+-   In the CheckBalance intent page, create a new output Context tag.
+
+<img
+    src="/images/aws-images/amazon-lex/create-context.png"
+    alt="screenshot of create context page"
+/>
+
+## Step 7: Create the FollowupCheckBalance intent and Apply the context
+
+1. Create a new FollowupCheckBalance intent.
+
+2. Apply the context to the "input contexts" in the context setting section.
+
+<img
+    src="/images/aws-images/amazon-lex/apply-context.png"
+    alt="screenshot of applying context"
+/>
+
+Now the bot is able to refer to info from the previous conversation when needed.
+
+## Step 8: Set the default value for DateOfBirth
+
+1. Set a default value to let the bot skip checking the birthday during follow up intent.
+
+<img
+    src="/images/aws-images/amazon-lex/add-default-value.png"
+    alt="screenshot of add a default value"
+/>
+
+2. Build and test:
+
+<img
+    src="/images/aws-images/amazon-lex/check-balance.png"
+    alt="screenshot of the chat of checking multiple account during follow up intent"
+    className="img-small"
+/>
+
+## Step 9: Create the TransferFunds intent
+
+Now it's time to set up the transfer funds feature.
+
+1. Create a new bank transfer intent.
+2. Add some sample utterances:
+
+-   Can I make a transfer?
+-   I want to transfer funds
+-   I'd like to transfer \{transferAmount\} from \{sourceAccountType\} to \{targetAccountType\}
+-   Can I transfer \{transferAmount\} to my \{targetAccountType\}
+
+3. Add slots and prompts:
+
+<img
+    src="/images/aws-images/amazon-lex/bank-transfer-slots.png"
+    alt="screenshot of bank transfer slots"
+/>
+
+4. Add confirmation prompts
+   Confirmation prompts helps to confirm with users wether they decide to process the request. This step helps to prevent the “”
+
+<img
+    src="/images/aws-images/amazon-lex/confirmation-prompt.png"
+    alt="screenshot of the confirmation prompt setup"
+/>
+
+5. Build and test:
+
+-   confirm to process
+
+<img
+    src="/images/aws-images/amazon-lex/transfer.png"
+    alt="screenshot of the chat screen with confimation prompt"
+    className="img-small"
+/>
+
+-   cancel the process
+
+<img
+    src="/images/aws-images/amazon-lex/cancel-transfer.png"
+    alt="screenshot of the chat screen with a cancel prompt"
+    className="img-small"
+/>
+
+## Have a look at all the intents that I created along the way
+
+<img
+    src="/images/aws-images/amazon-lex/all-the-intents.png"
+    alt="screenshot of all the intents created for the Banker bot"
+/>
+
+## <span className="error-section">An error I ran into was...👀</span>
+
+I came across the error of failing to build the bot twice when I was trying to apply the "AccountType" slot types to the CheckBalance intent and when I was connecting the Lambda function to the Amazon Lex.
+
+<img
+    src="/images/aws-images/amazon-lex/error.png"
+    alt="screenshot of an error message of failed to build the bot"
+/>
+
+<img
+    src="/images/aws-images/amazon-lex/error-details.png"
+    alt="screenshot of the error detail logs"
+/>
+
+I found that the error occurred because the slot names in the utterances and the Lambda function's Python code mismatched the name in the Slot Types setting. Once I made all the names the same, the bot was successfully built.
+
+<HighlightBlock color="#f9e4ff">
+    <h3>What I leart from the error ✨:</h3>
+    <p>
+        The Slot Types settings is crucial for the successful integration and
+        functioning of the chatbot. It is important to make sure that slot names
+        are consistent across different components of a chatbot system, such as
+        in utterances, backend code (like Lambda functions).
+    </p>
+</HighlightBlock>
+
+<br />
+#### 🤖 Here's my journey of creating my first chatbot, big thanks to [@NextWork](https://www.nextwork.org/) for setting up this engaging challenge!
