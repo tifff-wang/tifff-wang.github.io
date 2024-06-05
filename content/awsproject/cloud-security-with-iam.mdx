@@ -2,10 +2,114 @@
 title: Cloud Security with AWS IAM
 date: 2024-05-30
 cover: images/aws-images/IAM.png
-services: IAM
+services: EC2, IAM, Policies
 published: true
 ---
 
-##### April 2024
+##### May 2024
 
-# How I Visualise Netflix Data using Amazon QuickSight
+# How I used AWS IAM to enhance security in my cloud environment
+
+<img src="/images/aws-images/IAM/diagram.png" alt="create bucket screenshot" />
+
+In this project, I learned how to:
+
+-   💡 Launch **Amazon EC2** instances.
+-   💡 Dive deep into AWS IAM with the implementation of **Policies, Users and User Groups**.
+-   💡 Test the effectiveness of the IAM setting through the **Policy Simulator**
+
+## Step 1: Lauch 2 EC2 instances
+
+I've set up two EC2 instances, one with the **tag** of "development" and one with "production" to test the effectiveness of the permission settings.
+
+<img
+    src="/images/aws-images/IAM/instance-1-with-tag.png"
+    alt="create bucket screenshot"
+    className="img-small"
+/>
+<img
+    src="/images/aws-images/IAM/instance-2-with-tag.png"
+    alt="create bucket screenshot"
+    className="img-small"
+/>
+
+<HighlightBlock color="#f9e4ff">
+    <h3>Key notes ✏️:</h3>
+    <h4>What is EC2 instance?</h4>
+    <p>
+        A legendary AWS service! Amazon EC2 is a service that lets user to rent
+        and use virtual computers in the cloud. They're like your personal
+        computers, but they live on the internet instead of being physically in
+        front of you. 
+        
+        An instance is a computer/server that gets produced by EC2. Just like when you buy a laptop, with EC2 instances, you can pick a virtual computer that fits what you need for your projects. You can customise your EC2 instance's CPU, memory, storage, and networking capacity and more!
+    </p>
+    <h4>What is the tag for?</h4>
+    <p>
+       Tags helps us with identifying all resources with the same tag at once (they are useful filters when you're searching for something), cost allocation, and applying policies based on environment types. 
+    </p>
+
+</HighlightBlock>
+
+## Step 2: Set Up IAM Policies
+
+IAM stands for Identity and Access Management and IAM Policy is about giving permissions to IAM users, groups, or roles, saying what they can or can't do on certain resources, and when those rules kick in.
+
+<img
+    src="/images/aws-images/IAM/IAM-policy.png"
+    alt="create bucket screenshot"
+/>
+
+## Step 3: Create IAM User and User Group
+
+Here I created a new user group and then a new user to add to the group.
+
+<img
+    src="/images/aws-images/IAM/create-group.png"
+    alt="create bucket screenshot"
+/>
+
+<img
+    src="/images/aws-images/IAM/create-user.png"
+    alt="create bucket screenshot"
+/>
+
+## Step 4: Test IAM access for the User you've created.
+
+-   Now with my IAM Policy, IAM User Group and IAM User all set up, I logged into my AWS account as the new user and tried to stop the production EC2 instance.The red banner tells me that I'm not authorised to stop this instance, which means the policy works!
+
+<img
+    src="/images/aws-images/IAM/fail-to-stop-screenshot.png"
+    alt="create bucket screenshot"
+/>
+
+-   I also used the **IAM Policy Simulator** to test out the policy in a more effective way. It is very handy as it is able to show exactly which statement in the IAM policy is blocking the user.
+
+<img
+    src="/images/aws-images/IAM/simulator-tool.png"
+    alt="create bucket screenshot"
+    className="img-small"
+/>
+
+<img
+    src="/images/aws-images/IAM/policy-simulator.png"
+    alt="create bucket screenshot"
+/>
+
+<img
+    src="/images/aws-images/IAM/policy-simulator.png"
+    alt="create bucket screenshot"
+/>
+
+## <span className="error-section">An error I ran into was...👀</span>
+
+When I was testing the access, I noticed that the action permission to the development EC2 instance wasn't act as expected. I checked my instance and policy again and noticed that I set the first letter in capital in the tag which is different from the policy JSON file that caused the issue.
+
+<HighlightBlock color="#f9e4ff">
+    <h4>What I leart from the error ✏️:</h4>
+    <p>Make sure the tag name matches the policy in a case sensitive manner!</p>
+</HighlightBlock>
+
+<br/>
+<br/>
+#### Big thanks to [@NextWork](https://www.nextwork.org/) for setting up this engaging challenge!
