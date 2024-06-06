@@ -1,0 +1,91 @@
+---
+title: DevOps AWS Series (Part-2)
+date: 2024-06-06
+cover: images/aws-images/IAM.png
+services: CodeArtifact, Cloud9
+published: true
+---
+
+##### June 2024
+
+# DevOps in AWS
+
+In this project, I learned how to:
+
+-   💡 Created a new CodeArtifact domain and repository to manage my Java project's dependencies.
+-   💡 Configured my Cloud9 IDE to connect with CodeArtifact.
+-   💡 Compiled and tested the project using the CodeArtifact repository, verifying that all dependencies were correctly fetched.
+-   💡 Implemented IAM policies so that other AWS services in the CI/CD pipeline can access the CodeArtifact repository.
+
+## Step 1: Setting up a web app and IDE in the Cloud
+
+## Step 2: Create a Repository in AWS CodeCommit
+
+## Step 3: Secure the project's dependencies with AWS CodeArtifact
+
+<HighlightBlock color="#f9e4ff">
+    <h3>Key notes ✏️:</h3>
+    <h4>What is AWS CodeArtifact?</h4>
+    <p>
+        AWS CodeArtifact is a managed artifact repository service that makes it
+        easy for organizations to securely store, publish, and share software
+        packages used in their software development process. CodeArtifact
+        seamlessly integrates with popular build and package management tools
+        such as Maven, Gradle, npm, yarn, and pip. It's like a private storage
+        locker that keeps a backup copy of all your project's dependencies. So
+        that if a dependency faces an outage in the public repository that it
+        comes from, developers can still access to the backup from CodeArtifact
+        and continue building the project.
+    </p>
+</HighlightBlock>
+
+-   Create a domain and a new repo called "nextwork-package" in it.
+
+<img
+    src="/images/aws-images/devOps/create-domain.png"
+    alt="create codeArtifact domain panel"
+/>
+
+A domain in AWS CodeArtifact is like a big folder that can contains multiple repositories. It comes with a URL as the entry points for the project application to fetch and store the dependencies inside your domain.
+
+-   Select "maven-central-store" as the public upstream repository.
+
+<img
+    src="/images/aws-images/devOps/create-domain-repo.png"
+    alt="create codeArtifact domain repo panel"
+/>
+
+The image below demonstrated the flow of, if the needed packages are not availabe in your local repository, how Maven checks the "maven-central-store" to get the packages, and visit the Maven Central Repository if a required package is not available in maven-central-store.
+
+<img
+    src="/images/aws-images/devOps/maven-package-flow.png"
+    alt="maven package flow"
+/>
+
+-   Connect the CodeArtifact repository
+    -   Add a settings.xml file to the root of the project file in Cloud9.
+    -   Follow the "View connection instructions" in the CodeArtifact repository.
+
+<img
+    src="/images/aws-images/devOps/settings.png"
+    alt="the settings.xml file in IDE"
+/>
+
+-   Test the CodeArtifact Connection via Cloud9
+
+    -   Run "mvn -s settings.xml compile" to compile the code based on the settings in the setting.xml file.
+    -   After the compile success, all the dependencies appear in the "nextwork-package" repo in CodeArtifact
+
+{' '}
+
+<img
+    src="/images/aws-images/devOps/codeartifact-with-dependencies.png"
+    alt="codeArtifact repo with packages"
+/>
+
+-   Set up an IAM Policy for using CodeArtifact
+
+<img
+    src="/images/aws-images/devOps/codeartifact-policy.png"
+    alt="IAM policy for codeArtifact"
+/>

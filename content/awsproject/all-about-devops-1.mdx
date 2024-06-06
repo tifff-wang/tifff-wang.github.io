@@ -1,0 +1,149 @@
+---
+title: DevOps AWS Series (Part-1)
+date: 2024-06-06
+cover: images/aws-images/IAM.png
+services: Cloud9, CodeCommit, CodeArtifact
+published: true
+---
+
+##### May 2024
+
+# DevOps in AWS
+
+In this project, I learned how to:
+
+-   💡 Launched a new Cloud9 IDE.
+-   💡 Installed Apache Maven and Java.
+-   💡 Used Maven to set up a basic web app structure.
+-   💡 Set up a CodeCommit repository
+-   💡 Initialize a local repository and set its remote origin to my CodeCommit repo.
+-   💡 Add, commit and push in Cloud9 IDE.
+
+## Step 1: Setting up a web app and IDE in the Cloud
+
+-   Create a new environment in Cloud9 console to launch a new Cloud9 IDE
+
+<img
+    src="/images/aws-images/devOps/cloud9-IDE.png"
+    alt="Cloud9 IDE window"
+/>
+
+-   Install Maven & Java
+
+<HighlightBlock color="#f9e4ff">
+    <h3>Key notes ✏️:</h3>
+    <h4>What is Apache Maven?</h4>
+    <p>
+       Apache Maven is a powerful tool that automates the building of software.
+
+Building is an important multi-step process that transforms code written by developers into a final product that is ready for computers to run. The key steps typically include:
+
+<strong>Compiling, Linking, Packaging, Testing</strong>.
+
+Each of these steps is absolutely crucial for producing a functioning software application. Tools like Apache Maven automate these processes for you!
+
+</p>
+
+</HighlightBlock>
+
+<img
+    src="/images/aws-images/devOps/apache-maven-install.png"
+    alt="install maven command in terminal"
+/>
+
+<img
+    src="/images/aws-images/devOps/java-install.png"
+    alt="install java command in terminal"
+/>
+
+-   Create an Application with Maven
+
+<img
+    src="/images/aws-images/devOps/maven-new-app.png"
+    alt="create new app mvn command in terminal"
+/>
+
+<img
+    src="/images/aws-images/devOps/IDE-files.png"
+    alt="app files created"
+    className="img-small"
+/>
+
+<img
+    src="/images/aws-images/devOps/index-file.png"
+    alt="html in the index.jsx file"
+/>
+
+## Step 2: Create a Repository in AWS CodeCommit
+
+<HighlightBlock color="#f9e4ff">
+    <h3>Key notes ✏️:</h3>
+    <h4>What is CodeCommit?</h4>
+    <p>
+        AWS CodeCommit is a service that host Git repositories securely in the
+        cloud.
+    </p>
+</HighlightBlock>
+
+-   Navigate to Codecommit console to set up a git repository
+
+<img
+    src="/images/aws-images/devOps/create-codecommit-repo.png"
+    alt="create CodeCommit repository panel"
+/>
+
+-   Set up the git identity in cloud9
+    It helps the Git to know who is making changes to a repository.
+
+<img
+    src="/images/aws-images/devOps/git-identity.png"
+    alt="git identity command in termial"
+/>
+
+-   Initialize a local repository
+
+<img
+    src="/images/aws-images/devOps/initial-git.png"
+    alt="command to inital git repo in terminal"
+/>
+
+-   Set its remote origin to CodeCommit git repo
+
+    -   Clone the HTTPS URL from the CodeCommit repo
+
+<img
+    src="/images/aws-images/devOps/codecommit-repo.png"
+    alt="codeCommit repo panel"
+/>
+
+    -   Connect to the remote repository by appling the URL above in the command.
+
+<img
+    src="/images/aws-images/devOps/git-remote-add.png"
+    alt="command of remote add origin in terminal"
+/>
+
+-   Add, Commit and Push
+
+<img
+    src="/images/aws-images/devOps/initial-commit.png"
+    alt="commands for initial commit"
+/>
+
+-   The source code appears in the remote CodeCommit repo.
+
+<img
+    src="/images/aws-images/devOps/remote-repo.png"
+    alt="codeCommit repo panel with source code"
+/>
+
+-   Here's how to make a second commit
+
+<img
+    src="/images/aws-images/devOps/second-commit.png"
+    alt="commands for second commit"
+/>
+
+Now the CodeCommit repository is ready to store and version control the code.
+
+#### Big thanks to [@NextWork](https://www.nextwork.org/) for setting up this engaging challenge!
