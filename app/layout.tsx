@@ -1,7 +1,6 @@
-import Navbar from "@/components/navbar"
+import Navbar from '@/components/navbar'
 import '../styles/styles.css'
-import Footer from "@/components/footer"
-
+import Footer from '@/components/footer'
 
 export default function RootLayout({
     children,
@@ -21,7 +20,9 @@ export default function RootLayout({
                     name="description"
                     content="Web site created using create-react-app"
                 />
+
                 <title>Tiff's Portfolio</title>
+
                 <meta name="description" content="Web site created..." />
             </head>
             <body>

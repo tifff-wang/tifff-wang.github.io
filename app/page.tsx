@@ -1,6 +1,7 @@
 import { projects } from '@/.velite'
 import PostItem from '@/components/project-item'
 import { sortProjects } from '@/lib/utils'
+import Link from 'next/link'
 
 export default function Home() {
     const sortedProjects = sortProjects(
@@ -9,35 +10,37 @@ export default function Home() {
     return (
         <>
             <section id="hero">
-                <h1>
-                    <span>Tiff'</span>s<span id="tech">TECH</span> PORTFOLIO
-                </h1>
+                <div>
+                    <h1>
+                        <span>Tiff'</span>s<span id="tech">TECH</span> PORTFOLIO
+                    </h1>
 
-                <h2>Hey, I'm Tiff! I'm a full stack software developer!</h2>
-
-                <div id="buttons-container">
-                    {/* <a
-                        href="https://github.com/tifff-wang"
-                        id="github-button"
-                        target="_blank"
-                    >
-                        My Github
-                    </a> */}
-                    <a href="/project" id="github-button" target="_blank">
-                        My Projects
-                    </a>
-                    {/* <a
-                        href="https://drive.google.com/file/d/14wbq_boUuivqSpx_6mYn4skL99_wDf37/view?usp=sharing"
-                        id="resume-button"
-                        target="_blank"
-                    >
-                        My Resume
-                    </a> */}
-                    <a href="/about" id="resume-button" target="_blank">
-                        About Me
-                    </a>
+                    <h2>Hey, I'm Tiff! I'm a full stack software developer!</h2>
                 </div>
-                <div className="contact-icons-wrapper">
+
+                <div className="buttons-container">
+                    <div className="button-container">
+                        <div className="hero-section-button-animate"></div>
+                        <div className="hero-section-button">
+                            <Link href="/project" target="_blank">
+                                MyProjects()
+                            </Link>
+                        </div>
+                    </div>
+                    <div className="button-container">
+                        <div className="hero-section-button-animate about-me-animate"></div>
+                        <div className="hero-section-button about-me">
+                            <Link
+                                href="/about"
+                                className="about-me-button"
+                                target="_blank"
+                            >
+                                AboutMe()
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+                <div className="contact-icons-container">
                     <a href="mailto:thiffanyjun@hotmail.com">
                         <img
                             className="contact-icon"

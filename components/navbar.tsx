@@ -17,13 +17,19 @@ function Navbar() {
                 <div className="right-section">
                     <ul id="navbar-list">
                         <li>
-                            <a href="/project">My Works</a>
+                            <a href="/project">
+                                My Works<span className="brackets">()</span>
+                            </a>
                         </li>
                         <li>
-                            <a href="/about">About</a>
+                            <a href="/about">
+                                About<span className="brackets">()</span>
+                            </a>
                         </li>
                         <li>
-                            <a href="#contact">Contact</a>
+                            <a href="#contact">
+                                Contact<span className="brackets">()</span>
+                            </a>
                         </li>
                     </ul>
                 </div>
