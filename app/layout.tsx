@@ -20,11 +20,10 @@ export default function RootLayout({
                     name="description"
                     content="Web site created using create-react-app"
                 />
-
                 <title>Tiff's Portfolio</title>
-
                 <meta name="description" content="Web site created..." />
             </head>
+
             <body>
                 <Navbar />
                 <main>{children}</main>

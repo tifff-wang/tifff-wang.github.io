@@ -18,7 +18,7 @@ function Navbar() {
                     <ul id="navbar-list">
                         <li>
                             <a href="/project">
-                                My Works<span className="brackets">()</span>
+                                MyProjects<span className="brackets">()</span>
                             </a>
                         </li>
                         <li>

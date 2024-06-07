@@ -9,17 +9,20 @@
     --divid-color: #b8b8b8;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
+html,
 body {
     background-color: var(--dark-color);
     color: #f7f7f7;
-    /* padding-top: 140px; */
     font-family: 'Space Mono';
-    /* height: 100vh;
-    overflow: hidden; */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 hr {
@@ -92,21 +95,12 @@ ul#navbar-list li a:hover .brackets {
     align-items: center;
     justify-content: center;
     overflow: auto;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
-#hero h1 {
-    color: #f7f7f7;
-    font-weight: 800;
-    font-size: 16vw;
-    line-height: 15vw;
-    text-align: start;
-    margin-left: 4vw;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-#tech {
+.color-change-text {
+    font-size: 12vw;
+    margin: 0;
     animation: color-change 8s ease-in infinite;
 }
 
@@ -129,6 +123,20 @@ ul#navbar-list li a:hover .brackets {
     }
 }
 
+.tiff-portfolio-text-container {
+    margin-bottom: 60px;
+}
+
+.portfolio-text {
+    color: #f7f7f7;
+    font-size: 16vw;
+    line-height: 15vw;
+    text-align: start;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
 #hero h2 {
     width: 60%;
     color: #f7f7f7;
@@ -140,8 +148,32 @@ ul#navbar-list li a:hover .brackets {
     margin-bottom: 3vw;
 }
 
-br {
-    color: #f7f7f7;
+.title-container {
+    display: flex;
+}
+
+.short-intro {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-text-container h1 {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin-left: 0;
+}
+
+.replace-o {
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+.profile-image {
+    display: block;
+    width: 16vw;
+    height: auto;
 }
 
 #project-container {
@@ -387,8 +419,8 @@ a.about-me-button {
     color: var(--accent-color);
 }
 
-.button-container{
-  width:190px;
+.button-container {
+    width: 190px;
 }
 
 .hero-section-button,
@@ -404,6 +436,7 @@ a.about-me-button {
     justify-content: center;
     align-items: center;
     text-align: center;
+
     z-index: 0;
 }
 
@@ -443,7 +476,6 @@ a.about-me-button {
         var(--accent-color),
         rgba(250, 250, 250, 0) 35%
     );
-
     animation: rotate 2.5s linear infinite;
 }
 
@@ -457,6 +489,15 @@ a.about-me-button {
     height: calc(100% - 6px);
     background: #3b3b3b;
     border-radius: 15px;
+    box-shadow: var(--main-color) 3px 2px 3px;
+}
+
+.about-me:after {
+    box-shadow: var(--accent-color) 3px 2px 3px;
+}
+
+.hero-section-button:hover:after {
+    box-shadow: none;
 }
 
 @keyframes rotate {
@@ -464,6 +505,8 @@ a.about-me-button {
         transform: translate(-50%, -50%) rotate(1turn);
     }
 }
+
+/* Glow Button Animation End */
 
 /* project pages CSS */
 
@@ -661,29 +704,12 @@ td {
     font-weight: 600;
 }
 
-/* contact and footer CSS */
-#contact {
-    color: #f7f7f7;
-    font-family: system-ui;
-    line-height: 24px;
-    width: 100%;
-    margin-top: 64px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    bottom: 0;
-}
+/* Contact Icons CSS */
 
 .contact-icons-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 32px;
-    margin-bottom: 64px;
-}
-
-footer#contact h3 {
-    font-size: 32px;
 }
 
 .contact-icon {
@@ -692,12 +718,15 @@ footer#contact h3 {
     margin-left: 12px;
 }
 
-#contact img:hover {
+.contact-icon:hover {
     transform: scale(1.2);
 }
 
-.copyright {
-    text-align: center;
+/* footer CSS */
+
+footer {
+    width: 100%; /* Full width */
+    text-align: center; /* Center align the text */
     color: #b8b8b8;
     font-size: 0.8rem;
     font-family: system-ui;

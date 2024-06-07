@@ -10,12 +10,30 @@ export default function Home() {
     return (
         <>
             <section id="hero">
-                <div>
-                    <h1>
-                        <span>Tiff'</span>s<span id="tech">TECH</span> PORTFOLIO
-                    </h1>
-
-                    <h2>Hey, I'm Tiff! I'm a full stack software developer!</h2>
+                <div className="tiff-portfolio-text-container">
+                    <div className="title-container">
+                        <div>
+                            <h1 className="color-change-text">Tiff's</h1>
+                        </div>
+                        <div className="short-intro">
+                            <h2>
+                                Hey, I'm Tiff! I'm a full stack software
+                                developer!
+                            </h2>
+                        </div>
+                    </div>
+                    <div className="portfolio-text-container">
+                        <h1 className="portfolio-text">
+                            P
+                            <span className="replace-o">
+                                <img
+                                    src="/images/profile.png"
+                                    className="profile-image"
+                                />
+                            </span>
+                            RTFOLIO
+                        </h1>
+                    </div>
                 </div>
 
                 <div className="buttons-container">
@@ -66,7 +84,6 @@ export default function Home() {
                         />
                     </a>
                 </div>
-                <hr />
             </section>
         </>
     )
