@@ -1,15 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 /* body CSS */
+:root {
+    --main-color: rgb(233, 160, 255);
+    --dark-color: #4d4d4d;
+    --accent-color: rgb(115, 234, 185);
+    --light-color: #f7f7f7;
+    --divid-color: #b8b8b8;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: #4d4d4d;
+    background-color: var(--dark-color);
     color: #f7f7f7;
     /* padding-top: 140px; */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
-        sans-serif;
+    font-family: 'Space Mono';
     /* height: 100vh;
     overflow: hidden; */
 }
@@ -58,12 +66,11 @@ ul#navbar-list li a {
     font-size: 1rem;
     color: #4d4d4d;
     margin-right: 50px;
-    font-family: system-ui;
     font-weight: 300;
     cursor: pointer;
 }
 
-ul#navbar-list li a:hover {
+ul#navbar-list li a:hover .brackets {
     color: rgb(71, 207, 150);
 }
 
@@ -85,6 +92,7 @@ ul#navbar-list li a:hover {
     align-items: center;
     justify-content: center;
     overflow: auto;
+    margin-top: 100px;
 }
 
 #hero h1 {
@@ -130,40 +138,6 @@ ul#navbar-list li a:hover {
     line-height: 3vw;
     margin-top: 60px;
     margin-bottom: 3vw;
-}
-
-#buttons-container {
-    width: 400px;
-    display: flex;
-    justify-content: space-between;
-}
-
-#buttons-container a {
-    border-radius: 10px;
-    text-decoration: none;
-    text-align: center;
-
-    color: rgb(115, 234, 185);
-    border: solid white;
-    border-width: 0.7px;
-    width: 180px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    font-size: 24px;
-    font-weight: 300;
-    box-shadow: #d9d9d9 5px 5px;
-}
-
-#buttons-container #resume-button {
-    color: rgb(233, 160, 255);
-}
-
-#buttons-container #github-button:hover {
-    box-shadow: rgb(115, 234, 185) 7px 7px;
-}
-
-#buttons-container #resume-button:hover {
-    box-shadow: rgb(233, 160, 255) 7px 7px;
 }
 
 br {
@@ -391,6 +365,106 @@ h1 {
     color: rgb(115, 234, 185);
 }
 
+/* Glow Button Animation */
+
+.buttons-container {
+    width: 400px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buttons-container a {
+    text-decoration: none;
+    color: rgb(233, 160, 255);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+a.about-me-button {
+    color: var(--accent-color);
+}
+
+.button-container{
+  width:190px;
+}
+
+.hero-section-button,
+.hero-section-button-animate {
+    max-height: 65px;
+    max-width: 180px;
+    height: 100%;
+    width: 100%;
+    border-radius: 18px;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 0;
+}
+
+.hero-section-button-animate {
+    filter: blur(20px);
+}
+
+.hero-section-button:before,
+.hero-section-button-animate:before {
+    content: '';
+    z-index: -2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 1000px;
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.hero-section-button:hover:before,
+.hero-section-button-animate:hover:before {
+    background-image: conic-gradient(
+        rgba(255, 255, 255, 0),
+        rgb(233, 160, 255),
+        rgba(250, 250, 250, 0) 35%
+    );
+
+    animation: rotate 2.5s linear infinite;
+}
+
+.about-me:hover:before,
+.about-me-animate:hover:before {
+    background-image: conic-gradient(
+        rgba(255, 255, 255, 0),
+        var(--accent-color),
+        rgba(250, 250, 250, 0) 35%
+    );
+
+    animation: rotate 2.5s linear infinite;
+}
+
+.hero-section-button:after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    background: #3b3b3b;
+    border-radius: 15px;
+}
+
+@keyframes rotate {
+    100% {
+        transform: translate(-50%, -50%) rotate(1turn);
+    }
+}
+
 /* project pages CSS */
 
 .project-content {
@@ -458,8 +532,8 @@ h1 {
     height: auto;
 }
 
-.project-content .error-section{
-  color:red;
+.project-content .error-section {
+    color: red;
 }
 
 video {
@@ -600,7 +674,7 @@ td {
     bottom: 0;
 }
 
-.contact-icons-wrapper {
+.contact-icons-container {
     display: flex;
     align-items: center;
     justify-content: center;
