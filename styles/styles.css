@@ -229,6 +229,7 @@ h1 {
     margin: 0 0 0 45px;
 }
 
+.projects-summary-container,
 .project-item-container {
     width: full;
     height: 100vh;
@@ -751,4 +752,37 @@ aside button {
     aside button {
         display: none;
     }
+}
+
+.projects-summary-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.summary-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.projects-summary-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    list-style-type: none;
+}
+
+.projects-summary-list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.summary-anchor-link a {
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--light-color);
 }

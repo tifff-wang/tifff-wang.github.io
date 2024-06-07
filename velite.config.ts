@@ -18,6 +18,8 @@ const projects = defineCollection({
             stacks: s.string(),
             website: s.string(),
             github: s.string(),
+            summary: s.string(),
+            anchor: s.string(),
             metadata: s.metadata(),
             excerpt: s.excerpt(),
             content: s.markdown(),

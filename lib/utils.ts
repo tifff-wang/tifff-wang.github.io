@@ -10,13 +10,6 @@ interface HasDate {
     date: Date
 }
 
-// export function sortProjects<T extends HasDate>(items: Array<T>): Array<T> {
-//     return items.sort((a, b) => {
-//         if (a.date > b.date) return -1
-//         if (a.date < b.date) return 1
-//         return 0
-//     })
-// }
 
 export function sortProjects<T extends { date: string }>(items: Array<T>): Array<T> {
     return items.sort((a, b) => {

@@ -1,5 +1,6 @@
 import { projects } from '#site/content'
 import ProjectItem from '@/components/project-item'
+import ProjectSummary from '@/components/projects-summary'
 import { sortProjects } from '@/lib/utils'
 
 async function ProjectPage() {
@@ -9,6 +10,7 @@ async function ProjectPage() {
     const displayProjects = sortedProjects
     return (
         <div className="projects-container">
+            <ProjectSummary projects={displayProjects} />
             {displayProjects?.length > 0 ? (
                 <ul className="project-list">
                     {displayProjects.map((project, index) => {
