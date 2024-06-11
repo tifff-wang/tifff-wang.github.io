@@ -2,9 +2,10 @@ import Link from 'next/link'
 
 interface ProjectItem {
     anchor: string
-    cover: string
+    thumbnail: string
     summary: string
     slug: string
+
 }
 
 interface ProjectSummaryProps {
@@ -25,13 +26,16 @@ function ProjectSummary({ projects }: ProjectSummaryProps) {
                                 <div className="summary-image-container">
                                     <img
                                         id=""
-                                        src={project.cover}
+                                        src={project.thumbnail}
                                         alt=""
                                         className="summary-image"
                                     />
                                 </div>
                                 <div className="summary-anchor-link">
-                                    <Link href={project.slug}>
+                                    <Link
+                                        href={`#${project.anchor}`}
+                                        scroll={false}
+                                    >
                                         {project.summary}
                                     </Link>
                                 </div>

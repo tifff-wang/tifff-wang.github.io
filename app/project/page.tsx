@@ -14,28 +14,19 @@ async function ProjectPage() {
             {displayProjects?.length > 0 ? (
                 <ul className="project-list">
                     {displayProjects.map((project, index) => {
-                        const {
-                            slug,
-                            date,
-                            title,
-                            description,
-                            stacks,
-                            website,
-                            github,
-                            cover,
-                        } = project
                         return (
-                            <li key={slug}>
+                            <li key={project.slug}>
                                 <ProjectItem
-                                    slug={slug}
-                                    date={date}
-                                    description={description}
-                                    stacks={stacks}
-                                    title={title}
-                                    website={website}
-                                    github={github}
-                                    cover={cover}
+                                    slug={project.slug}
+                                    date={project.date}
+                                    description={project.description}
+                                    stacks={project.stacks}
+                                    title={project.title}
+                                    website={project.website}
+                                    github={project.github}
+                                    cover={project.cover}
                                     index={index}
+                                    anchor={project.anchor}
                                 />
                             </li>
                         )

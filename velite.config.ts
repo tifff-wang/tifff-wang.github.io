@@ -15,6 +15,7 @@ const projects = defineCollection({
             description: s.string().max(999).optional(),
             date: s.isodate(),
             cover: s.string(),
+            thumbnail: s.string(),
             stacks: s.string(),
             website: s.string(),
             github: s.string(),

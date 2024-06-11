@@ -258,29 +258,6 @@ h1 {
     min-height: 300px;
 }
 
-#discripmini-gif {
-    background-image: url('../images/descripmini.gif');
-    background-size: contain;
-}
-
-#donut-gif {
-    background-image: url('../images/tiffs-donuts-gif.gif');
-    background-size: contain;
-}
-
-#calculator-gif {
-    background-image: url('../images/calculator-gif.gif');
-    background-size: contain;
-}
-
-#design-gif {
-    background-image: url('../images/design-portfolio-gif.gif');
-    background-size: contain;
-}
-
-/* .project-image:hover {
-    opacity: 0;
-} */
 
 .project-info-container {
     width: 45%;
