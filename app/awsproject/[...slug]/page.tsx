@@ -1,4 +1,5 @@
 import { awsprojects } from '#site/content'
+import BackToTopButton from '@/components/back-to-top-button'
 import { MDXContent } from '@/components/mdx-component'
 import { notFound } from 'next/navigation'
 
@@ -35,10 +36,13 @@ async function AWSProjectPage({ params }: AWSProjectPageProps) {
     }
 
     return (
-        <article className="project-content">
-            <MDXContent code={awsProject.code} />
-            <hr />
-        </article>
+        <>
+            <article className="project-content">
+                <MDXContent code={awsProject.code} />
+                <hr />
+            </article>
+            <BackToTopButton />
+        </>
     )
 }
 

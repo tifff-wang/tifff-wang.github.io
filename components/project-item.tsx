@@ -11,19 +11,26 @@ interface ProjectItemProps {
     website: string
     github: string
     index: number
+    anchor: string
 }
 
 function ProjectItem(props: ProjectItemProps) {
-    const { slug, title, description, date, cover, stacks, website, github, index } =
-        props
+    const {
+        slug,
+        title,
+        description,
+        date,
+        cover,
+        stacks,
+        website,
+        github,
+        index,
+        anchor,
+    } = props
 
     return (
-        <article
-            className="project-item-container"
-        >
-            <div
-                className="img-container"
-            >
+        <article id={anchor} className="project-item-container">
+            <div className="img-container">
                 <img className="project-image" id="" src={cover} alt="" />
             </div>
 
@@ -37,38 +44,49 @@ function ProjectItem(props: ProjectItemProps) {
                     </p>
                 </div>
                 <div className="project-links-container">
-                    {/* <div>
-                        <Link href={slug} className="view-more">
-                            View More
-                        </Link>
-                    </div> */}
                     <div className="links-icons-container">
-                        <Link href={website} target="_blank">
-                            <img
-                                className="host-icon"
-                                src="icons/host-icon.svg"
-                                alt="website logo"
-                            />
-                        </Link>
+                        {website && (
+                            <Link href={website} target="_blank">
+                                <img
+                                    className="host-icon"
+                                    src="icons/host-icon.svg"
+                                    alt="website logo"
+                                />
+                            </Link>
+                        )}
 
-                        <Link href={github} target="_blank">
-                            <img
-                                className="project-icon"
-                                src="icons/github-icon.png"
-                                alt="github logo"
-                            />
-                        </Link>
+                        {github && (
+                            <Link href={github} target="_blank">
+                                <img
+                                    className="project-icon"
+                                    src="icons/github-icon.png"
+                                    alt="github logo"
+                                />
+                            </Link>
+                        )}
                     </div>
 
-                    <Link
-                        href={slug}
-                        className="btn-animate btn-animate__around-2"
-                    >
-                        <svg xmlns="#">
-                            <rect height="100%" width="100%"></rect>
-                        </svg>
-                        View More
-                    </Link>
+                    {title === 'AWS Projects' ? (
+                        <Link
+                            href="/awsproject"
+                            className="btn-animate btn-animate__around-2"
+                        >
+                            <svg xmlns="#">
+                                <rect height="100%" width="100%"></rect>
+                            </svg>
+                            View More
+                        </Link>
+                    ) : (
+                        <Link
+                            href={slug}
+                            className="btn-animate btn-animate__around-2"
+                        >
+                            <svg xmlns="#">
+                                <rect height="100%" width="100%"></rect>
+                            </svg>
+                            View More
+                        </Link>
+                    )}
                 </div>
             </div>
         </article>

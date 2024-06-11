@@ -1,4 +1,5 @@
 import { projects } from '#site/content'
+import BackToTopButton from '@/components/back-to-top-button'
 import { MDXContent } from '@/components/mdx-component'
 import { notFound } from 'next/navigation'
 
@@ -31,10 +32,13 @@ async function ProjectPage({ params }: ProjectPageProps) {
     }
 
     return (
-        <article className="project-content">
-            <MDXContent code = {project.code} />
-            <hr/>
-        </article>
+        <>
+            <article className="project-content">
+                <MDXContent code={project.code} />
+                <hr />
+            </article>
+            <BackToTopButton />
+        </>
     )
 }
 
