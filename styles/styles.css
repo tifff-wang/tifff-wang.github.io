@@ -9,6 +9,10 @@
     --divid-color: #b8b8b8;
 }
 
+* {
+    scroll-behavior: smooth;
+}
+
 html,
 body {
     background-color: var(--dark-color);
@@ -507,7 +511,7 @@ a.about-me-button {
     font-size: 0.85rem;
     font-weight: 200;
     margin: 10px 0;
-    color:#c3c3c3
+    color: #c3c3c3;
 }
 
 .project-content p {
@@ -615,7 +619,7 @@ td {
 /* aws projects */
 
 .aws-projects-container {
-    display:flex;
+    display: flex;
     justify-content: center;
     margin: auto;
     margin-top: 120px;
@@ -627,9 +631,9 @@ td {
     flex-direction: row;
     flex-wrap: wrap;
     list-style-type: none;
-    justify-content: center; 
+    justify-content: center;
     gap: 40px;
-    width: 90%; 
+    width: 90%;
     padding-left: 0;
     margin: 0 auto;
 }
@@ -671,7 +675,7 @@ td {
 .aws-date {
     margin-top: 0;
     font-size: 0.75rem;
-    color:#c6c6c6
+    color: #c6c6c6;
 }
 
 .aws-services {

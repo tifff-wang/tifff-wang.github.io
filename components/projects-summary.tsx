@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
+
 interface ProjectItem {
     anchor: string
     thumbnail: string
     summary: string
     slug: string
-
 }
 
 interface ProjectSummaryProps {
@@ -14,7 +14,7 @@ interface ProjectSummaryProps {
 
 function ProjectSummary({ projects }: ProjectSummaryProps) {
     return (
-        <section className="projects-summary-container">
+        <section className="projects-summary-container" id="top">
             <div className="projects-summary-title">
                 <h1>My Projects:</h1>
             </div>
@@ -32,10 +32,7 @@ function ProjectSummary({ projects }: ProjectSummaryProps) {
                                     />
                                 </div>
                                 <div className="summary-anchor-link">
-                                    <Link
-                                        href={`#${project.anchor}`}
-                                        scroll={false}
-                                    >
+                                    <Link href={`/project/#${project.anchor}`}>
                                         {project.summary}
                                     </Link>
                                 </div>

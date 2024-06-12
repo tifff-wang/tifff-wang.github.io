@@ -2,6 +2,7 @@ import { projects } from '#site/content'
 import ProjectItem from '@/components/project-item'
 import ProjectSummary from '@/components/projects-summary'
 import { sortProjects } from '@/lib/utils'
+import Link from 'next/link'
 
 async function ProjectPage() {
     const sortedProjects = sortProjects(
@@ -30,6 +31,11 @@ async function ProjectPage() {
                                         index={index}
                                         anchor={project.anchor}
                                     />
+                                    <aside>
+                                        <a href="#top" >
+                                            <button>back to top</button>
+                                        </a>
+                                    </aside>
                                 </li>
                             )
                         })}
