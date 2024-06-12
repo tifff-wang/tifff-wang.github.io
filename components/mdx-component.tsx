@@ -5,11 +5,11 @@ const HighlightBlock = ({ children, color = 'yellow' }) => (
     <div
         style={{
             backgroundColor: color,
-            padding:"5px 20px 20px 20px",
-            margin:"auto",
+            padding: '5px 20px 20px 20px',
+            margin: '50px auto',
             borderRadius: '5px',
             color: 'black',
-            width:"80%"
+            width: '80%',
         }}
     >
         {children}

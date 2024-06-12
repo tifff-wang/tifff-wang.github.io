@@ -355,7 +355,7 @@ h1 {
 }
 
 .host-icon {
-    width: 35px;
+    width: 36px;
 }
 .project-icon {
     width: 30px;
@@ -493,8 +493,8 @@ a.about-me-button {
     padding-left: 2rem;
     padding-right: 2rem;
     /* below 2 lines are to offset content from the fixed nav-bar for anchor link  */
-    padding-top: 300px;
-    margin-top: -300px;
+    /* padding-top: 300px;
+    margin-top: -300px; */
 }
 
 .project-content h1 {
@@ -518,7 +518,6 @@ a.about-me-button {
 .project-content h2 {
     margin-top: 40px;
     font-size: 1.3rem;
-    font-family: 'Times New Roman', Times, serif;
     color: #eeeeee;
 }
 
@@ -533,18 +532,16 @@ a.about-me-button {
 .project-content ol li,
 .project-content ul li {
     font-size: 1rem;
-    line-height: 1.2rem;
+    line-height: 1.8rem;
     font-weight: 300;
-    margin-bottom: 24px;
+    font-family: system-ui, 'Open Sans', sans-serif;
+    margin-bottom: 18px;
 }
 
 .project-content img {
     width: 90%;
-    margin-top: 40px;
-    margin-bottom: 32px;
+    margin: 50px auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .project-content .img-small {
@@ -558,14 +555,6 @@ a.about-me-button {
 
 video {
     width: 100%;
-}
-
-.conclusion-list li {
-    font-size: 1.2rem;
-    font-family: system-ui;
-    font-weight: 200;
-    line-height: 2rem;
-    margin-bottom: 24px;
 }
 
 .project-content table,
