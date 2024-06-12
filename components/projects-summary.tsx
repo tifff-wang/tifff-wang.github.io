@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import StackList from './stack-list'
 
 
 interface ProjectItem {
@@ -6,6 +7,7 @@ interface ProjectItem {
     thumbnail: string
     summary: string
     slug: string
+    stacks: string
 }
 
 interface ProjectSummaryProps {
@@ -24,18 +26,21 @@ function ProjectSummary({ projects }: ProjectSummaryProps) {
                         return (
                             <li key={project.slug}>
                                 <div className="summary-image-container">
-                                    <img
-                                        id=""
-                                        src={project.thumbnail}
-                                        alt=""
-                                        className="summary-image"
-                                    />
+                                    <Link href={`/project/#${project.anchor}`}>
+                                        <img
+                                            id=""
+                                            src={project.thumbnail}
+                                            alt=""
+                                            className="summary-image"
+                                        />
+                                    </Link>
                                 </div>
                                 <div className="summary-anchor-link">
                                     <Link href={`/project/#${project.anchor}`}>
                                         {project.summary}
                                     </Link>
                                 </div>
+                                <StackList stacks={project.stacks} />
                             </li>
                         )
                     })}

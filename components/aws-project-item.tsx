@@ -1,5 +1,6 @@
 import { formatDate } from '@/lib/utils'
 import Link from 'next/link'
+import StackList from './stack-list'
 
 interface AWSProjectItemProps {
     slug: string
@@ -28,10 +29,7 @@ function AWSProjectItem(props: AWSProjectItemProps) {
 
             <div className="aws-project-info-container">
                 <div className="aws-info-container">
-                    <p className="aws-services">
-                        <i>{services}</i>
-                    </p>
-                    <p className="aws-date">{formatDate(date)}</p>
+                    <StackList stacks={services} />
                 </div>
             </div>
         </article>

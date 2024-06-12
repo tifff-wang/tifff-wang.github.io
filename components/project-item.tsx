@@ -1,5 +1,6 @@
 import { formatDate } from '@/lib/utils'
 import Link from 'next/link'
+import StackList from './stack-list'
 
 interface ProjectItemProps {
     slug: string
@@ -38,10 +39,8 @@ function ProjectItem(props: ProjectItemProps) {
                 <div>
                     <p className="date">{formatDate(date)}</p>
                     <h2 className="project-title">{title}</h2>
+                    <StackList stacks={stacks} />
                     <p className="project-description">{description}</p>
-                    <p className="stacks">
-                        <i>{stacks}</i>
-                    </p>
                 </div>
                 <div className="project-links-container">
                     <div className="links-icons-container">

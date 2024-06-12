@@ -18,3 +18,7 @@ export function sortProjects<T extends { date: string }>(items: Array<T>): Array
         return dateA > dateB ? -1 : dateA < dateB ? 1 : 0
     })
 }
+
+export function stacksToArray (stacks: string): string[]{
+    return stacks.split("|")
+}
