@@ -228,11 +228,6 @@ ul#navbar-list li a:hover .brackets {
     scroll-snap-type: y mandatory;
 }
 
-.project-container,
-h1 {
-    margin: 0 0 0 45px;
-}
-
 .projects-summary-container,
 .project-item-container {
     width: full;
@@ -245,10 +240,6 @@ h1 {
     align-items: center;
     scroll-snap-align: start;
     position: relative;
-}
-
-.row-reverse {
-    flex-direction: row-reverse;
 }
 
 .img-container {
@@ -381,7 +372,7 @@ h1 {
     justify-content: space-between;
 }
 
-.buttons-container a {
+.button-container a {
     text-decoration: none;
     color: rgb(233, 160, 255);
     font-size: 18px;
@@ -496,7 +487,6 @@ a.about-me-button {
 
 .project-content h1 {
     font-size: 2rem;
-    margin-left: 0;
 }
 
 .project-content h5 {
@@ -757,7 +747,7 @@ aside button {
     gap: 60px;
     list-style-type: none;
     padding-left: 0;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .projects-summary-list li {
@@ -793,4 +783,35 @@ aside button {
     padding: 3px 5px;
     border-radius: 5px;
     text-align: center;
+}
+
+/* about me  */
+.about-me-container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 80px auto;
+}
+
+.profile-image-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+.profile-image {
+    width: 80%;
+    margin: auto;
+}
+
+.self-intro {
+    width: 65%;
+    line-height: 1.8rem;
+    font-size: 15px;
 }
