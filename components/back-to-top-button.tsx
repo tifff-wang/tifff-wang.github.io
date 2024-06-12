@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 
-const BackToTopButton = () => {
+function BackToTopButton(){
     const [visible, setVisible] = useState(false)
 
     const toggleVisible = () => {
