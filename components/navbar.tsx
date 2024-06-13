@@ -1,5 +1,7 @@
 'use client'
 
+import NavbarLinks from "./navbar-links"
+
 function Navbar() {
     return (
         <nav id="navigation">
@@ -14,25 +16,7 @@ function Navbar() {
                     </a>
                 </div>
 
-                <div className="right-section">
-                    <ul id="navbar-list">
-                        <li>
-                            <a href="/project">
-                                MyProjects<span className="brackets">()</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/about">
-                                About<span className="brackets">()</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact">
-                                Contact<span className="brackets">()</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <NavbarLinks />
             </section>
         </nav>
     )

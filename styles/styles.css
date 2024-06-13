@@ -58,27 +58,22 @@ hr {
     margin-left: 30px;
 }
 
-#navbar-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.navbar-links-container {
+    width: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 20px;
 }
 
-ul#navbar-list li {
-    display: inline;
-}
-
-ul#navbar-list li a {
+.navbar-link {
+    color: var(--dark-color);
     text-decoration: none;
-    font-size: 1rem;
-    color: #4d4d4d;
-    margin-right: 50px;
-    font-weight: 300;
     cursor: pointer;
 }
 
-ul#navbar-list li a:hover .brackets {
-    color: rgb(71, 207, 150);
+.navbar-link:hover .brackets {
+    color: var(--accent-color);
 }
 
 @media only screen and (max-width: 480px) {
@@ -669,8 +664,8 @@ td {
 
 .contact-icons-container {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .contact-icon {
@@ -802,7 +797,7 @@ aside button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:20px;
+    gap: 20px;
 }
 
 .profile-image {
@@ -814,4 +809,24 @@ aside button {
     width: 65%;
     line-height: 1.8rem;
     font-size: 15px;
+}
+
+/* contact dropdown */
+.contact-link {
+    position: relative;
+}
+
+.contact-dropdown {
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    width: 200px;
+    max-height: 480px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid var(--accent-color);
+    border-radius: 15px;
+    background-color: var(--dark-color);
+    z-index: 100;
 }
