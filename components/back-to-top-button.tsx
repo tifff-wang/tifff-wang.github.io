@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 
-function BackToTopButton(){
+function BackToTopButton() {
     const [visible, setVisible] = useState(false)
 
     const toggleVisible = () => {
@@ -29,7 +29,7 @@ function BackToTopButton(){
                 onClick={scrollToTop}
                 style={{ display: visible ? 'inline' : 'none' }}
             >
-                back to top
+                ^Top
             </button>
         </aside>
     )

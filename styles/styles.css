@@ -706,10 +706,12 @@ aside button {
     z-index: 5000;
     background-color: var(--dark-color);
     color: #f7f7f7;
-    font-size: 1rem;
+    font-size: 0.8rem;
     border: 1px solid #f7f7f7;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 10px;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
     cursor: pointer;
 }
 
@@ -723,6 +725,7 @@ aside button {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .summary-image {
@@ -761,6 +764,7 @@ aside button {
 
 .summary-anchor-link {
     margin-bottom: 20px;
+    text-align: center;
 }
 
 /* stack list */

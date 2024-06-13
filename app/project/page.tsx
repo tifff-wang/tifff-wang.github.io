@@ -33,7 +33,7 @@ async function ProjectPage() {
                                     />
                                     <aside>
                                         <a href="#top" >
-                                            <button>back to top</button>
+                                            <button>^Top</button>
                                         </a>
                                     </aside>
                                 </li>
