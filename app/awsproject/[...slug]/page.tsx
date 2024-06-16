@@ -10,9 +10,7 @@ interface AWSProjectPageProps {
     }
 }
 
-export async function getAWSProjectFromParams(
-    params: AWSProjectPageProps['params']
-) {
+async function getProjectFromParams(params: AWSProjectPageProps['params']) {
     const slug = params?.slug?.join('/')
     const awsproject = awsprojects.find(
         (project) => project.slugAsParams === slug
@@ -30,7 +28,7 @@ export async function generateStaticParams(): Promise<
 }
 
 async function AWSProjectPage({ params }: AWSProjectPageProps) {
-    const awsProject = await getAWSProjectFromParams(params)
+    const awsProject = await getProjectFromParams(params)
 
     if (!awsProject || !awsProject.published) {
         notFound()

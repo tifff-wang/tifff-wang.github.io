@@ -10,7 +10,7 @@ interface ProjectPageProps {
     }
 }
 
-export async function getProjectFromParams(params: ProjectPageProps['params']) {
+async function getProjectFromParams(params: ProjectPageProps['params']) {
     const slug = params?.slug?.join('/')
     const project = projects.find((project) => project.slugAsParams === slug)
 

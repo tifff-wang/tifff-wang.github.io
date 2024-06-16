@@ -124,6 +124,7 @@ hr {
 
 .tiff-portfolio-text-container {
     margin-bottom: 60px;
+    width: 95%;
 }
 
 .portfolio-text {
@@ -822,8 +823,8 @@ aside button {
 
 .contact-dropdown {
     position: absolute;
-    top: 65px;
-    right: 20px;
+    top: 68px;
+    right: 30px;
     width: 200px;
     max-height: 480px;
     display: flex;
