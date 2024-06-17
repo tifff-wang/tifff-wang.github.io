@@ -1,8 +1,8 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
-function BackToTopButton() {
+export function BackToTopButton() {
     const [visible, setVisible] = useState(false)
 
     const toggleVisible = () => {
@@ -14,14 +14,22 @@ function BackToTopButton() {
         }
     }
 
+    useEffect(() => {
+        // Ensures this code block only runs on the client side
+        window.addEventListener('scroll', toggleVisible)
+
+        // Cleanup function to remove the event listener
+        return () => {
+            window.removeEventListener('scroll', toggleVisible)
+        }
+    }, [])
+
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth',
         })
     }
-
-    window.addEventListener('scroll', toggleVisible)
 
     return (
         <aside>
@@ -35,4 +43,4 @@ function BackToTopButton() {
     )
 }
 
-export default BackToTopButton
+

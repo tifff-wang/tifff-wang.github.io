@@ -32,7 +32,10 @@ interface MDXProps {
     components?: Record<string, React.ComponentType>
 }
 
-export const MDXContent = ({ code, components }: MDXProps) => {
+const MDXContent = ({ code, components }: MDXProps) => {
     const Component = useMDXComponent(code)
+    console.log(`MDXContent Component: ${Component}}`)
     return <Component components={{ ...sharedComponents, ...components }} />
 }
+
+export default MDXContent

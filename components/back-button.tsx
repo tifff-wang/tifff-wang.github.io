@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation'
 import { FaCircleArrowLeft } from 'react-icons/fa6'
 
-function BackButton() {
+export function BackButton() {
   const router = useRouter()
     return (
         <aside>
@@ -17,4 +17,4 @@ function BackButton() {
     )
 }
 
-export default BackButton
+

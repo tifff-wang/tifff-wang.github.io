@@ -17,3 +17,6 @@ dist
 
 # velite files
 .velite
+
+# /out
+/out

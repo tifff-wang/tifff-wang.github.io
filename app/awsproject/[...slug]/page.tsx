@@ -1,7 +1,7 @@
 import { awsprojects } from '#site/content'
-import BackButton from '@/components/back-button'
-import BackToTopButton from '@/components/back-to-top-button'
-import { MDXContent } from '@/components/mdx-component'
+import { BackButton } from '@/components/back-button'
+import { BackToTopButton } from '@/components/back-to-top-button'
+import MDXContent from '@/components/mdx-component'
 import { notFound } from 'next/navigation'
 
 interface AWSProjectPageProps {
@@ -27,7 +27,7 @@ export async function generateStaticParams(): Promise<
     }))
 }
 
-async function AWSProjectPage({ params }: AWSProjectPageProps) {
+export default async function AWSProjectPage({ params }: AWSProjectPageProps) {
     const awsProject = await getProjectFromParams(params)
 
     if (!awsProject || !awsProject.published) {
@@ -45,5 +45,3 @@ async function AWSProjectPage({ params }: AWSProjectPageProps) {
         </>
     )
 }
-
-export default AWSProjectPage

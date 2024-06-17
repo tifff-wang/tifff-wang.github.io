@@ -1,6 +1,6 @@
 import { awsprojects } from '#site/content'
 import AWSProjectItem from '@/components/aws-project-item'
-import BackButton from '@/components/back-button'
+import {BackButton} from '@/components/back-button'
 import { sortProjects } from '@/lib/utils'
 
 async function AWSProjectPage() {

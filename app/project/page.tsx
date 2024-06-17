@@ -32,7 +32,7 @@ async function ProjectPage() {
                                         anchor={project.anchor}
                                     />
                                     <aside>
-                                        <a href="#top" >
+                                        <a href="#top">
                                             <button>^Top</button>
                                         </a>
                                     </aside>

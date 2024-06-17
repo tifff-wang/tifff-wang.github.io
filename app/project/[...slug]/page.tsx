@@ -1,7 +1,7 @@
 import { projects } from '#site/content'
-import BackButton from '@/components/back-button'
-import BackToTopButton from '@/components/back-to-top-button'
-import { MDXContent } from '@/components/mdx-component'
+import { BackButton } from '@/components/back-button'
+import { BackToTopButton } from '@/components/back-to-top-button'
+import MDXContent from '@/components/mdx-component'
 import { notFound } from 'next/navigation'
 
 interface ProjectPageProps {
@@ -25,7 +25,7 @@ export async function generateStaticParams(): Promise<
     }))
 }
 
-async function ProjectPage({ params }: ProjectPageProps) {
+export default async function ProjectPage({ params }: ProjectPageProps) {
     const project = await getProjectFromParams(params)
 
     if (!project || !project.published) {
@@ -43,5 +43,3 @@ async function ProjectPage({ params }: ProjectPageProps) {
         </>
     )
 }
-
-export default ProjectPage
