@@ -15,7 +15,10 @@ async function AboutPage() {
                     <div className="button-container">
                         <div className="hero-section-button-animate"></div>
                         <div className="hero-section-button">
-                            <Link href="/project" target="_blank">
+                            <Link
+                                href="https://drive.google.com/file/d/14wbq_boUuivqSpx_6mYn4skL99_wDf37/view?usp=sharing"
+                                target="_blank"
+                            >
                                 CheckMyResume()
                             </Link>
                         </div>

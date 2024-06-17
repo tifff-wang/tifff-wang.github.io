@@ -344,23 +344,10 @@ hr {
     width: 30px;
 }
 
-.tech-tag,
-.core-tag {
-    font-size: 1.375rem;
-    color: rgb(233, 160, 255);
-    margin-top: 16px;
-    margin-bottom: 0;
-    text-transform: uppercase;
-}
-
-.core-tag {
-    color: rgb(115, 234, 185);
-}
-
 /* Glow Button Animation */
 
 .buttons-container {
-    width: 400px;
+    width: 420px;
     height: 100px;
     margin: auto;
     display: flex;
@@ -813,7 +800,7 @@ aside button {
 .self-intro {
     width: 65%;
     line-height: 1.8rem;
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 /* contact dropdown */
