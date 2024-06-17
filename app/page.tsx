@@ -41,19 +41,13 @@ export default function Home() {
                     <div className="button-container">
                         <div className="hero-section-button-animate"></div>
                         <div className="hero-section-button">
-                            <Link href="/project" target="_blank">
-                                MyProjects()
-                            </Link>
+                            <Link href="/project">MyProjects()</Link>
                         </div>
                     </div>
                     <div className="button-container">
                         <div className="hero-section-button-animate about-me-animate"></div>
                         <div className="hero-section-button about-me">
-                            <Link
-                                href="/about"
-                                className="about-me-button"
-                                target="_blank"
-                            >
+                            <Link href="/about" className="about-me-button">
                                 AboutMe()
                             </Link>
                         </div>
