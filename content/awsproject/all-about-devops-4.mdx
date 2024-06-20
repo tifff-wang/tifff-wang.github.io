@@ -1,0 +1,142 @@
+---
+title: DevOps AWS Series (Part-4)
+date: 2024-06-20
+cover: https://i.ibb.co/fH4NN5d/Screenshot-2024-06-19-at-3-18-54-PM.png
+services: CodeDeploy | CloudFormation | Scripts
+published: true
+---
+
+##### June 2024
+
+# Deploy an App with AWS CodeDeploy
+
+## In this project, I learned how to:
+
+-   💡 Create deployment scripts.
+-   💡 Direct CodeDeploy with appspec.yml file.
+-   💡 Build a CodeDeploy application.
+-   💡 Set up a deployment group.
+-   💡 Launch your automated deployment.
+-   💡 **How to debug the deployment error through deployment log**
+
+<img src="https://i.ibb.co/7kMH5dL/deploy-flow.png" />
+
+### ✅ Steps completed from previous project sections:
+
+Step 1: Setting up a web app and IDE in the Cloud
+
+Step 2: Create a Repository in AWS CodeCommit
+
+Step 3: Secure the project's dependencies with AWS CodeArtifact
+
+Step 4: Package an App with AWS CodeBuild
+
+## ⏭️ Step 5: Deploy the App with AWS CodeDeploy
+
+#### 1. Use AWS CloudFormation to provision a VPC and an EC2 instance for deployment.
+
+<img src="https://i.ibb.co/HHjNsJX/stack-details.png" />
+
+<HighlightBlock color="#f9e4ff">
+    <h3>Key notes ✏️:</h3>
+    <h4>Why need a VPC?</h4>
+    <p>
+        Web apps need a VPC because they have more complex needs like connecting
+        with multiple resources that communicate with each other e.g. databases
+        and EC2 instances, keeping everything secure, and controlling network
+        traffic.
+    </p>
+</HighlightBlock>
+
+<img src="https://i.ibb.co/QMSXcDc/server-instance.png" />
+
+#### 2. Create scripts
+
+-   In the Cloud9 IDE, I crafted three bash scripts that automate the setup, startup, and shutdown of your the app on EC2 instances.
+
+<img src="https://i.ibb.co/PrGx3Q4/scripts-folder.png" className="small-img" />
+
+#### 3. Create a appspec.yml file
+
+-   Create a appspec.yml file in the root of the code repository
+
+<img src="https://i.ibb.co/JrRpBfm/appspec-code.png" />
+
+<HighlightBlock color="#f9e4ff">
+    <h3>Key notes ✏️:</h3>
+    <h4>What's a appspec.yml for?</h4>
+    <p>
+        It transforming the manual scripts into a structured CodeDeploy
+        workflow. It tells CodeDeploy what to do at different stages of the
+        deployment process, such as which scripts to run and where to place
+        files from installing dependencies to starting the server.
+    </p>
+</HighlightBlock>
+
+-   Adds the appspec.yml and scripts folder to the buildspec.yml file so that they can be added to the WAR file after the build process.
+
+<img src="https://i.ibb.co/r6c77GV/update-buildspec.png" />
+
+#### 4. Create a "AWSCodeDeployRole" in IAM
+
+-   Create a new role with CodeDeploy as the service and use case. The "AWSCodeDeployRole" will grant CodeDeploy access to the EC2.
+
+<img src="https://i.ibb.co/8mHCVF0/deploy-role.png" />
+
+#### 5. Create a CodeDeploy application and deployment group
+
+<img src="https://i.ibb.co/nB3yqM4/set-up-deploy.png" />
+
+<img src="https://i.ibb.co/kyv2Trv/create-deployment-group.png" />
+
+#### 6. Create and launch a deployment
+
+In the config, I pointed CodeDeploy to WAR file's S3 bucket.
+
+<img src="https://i.ibb.co/W2nVMGx/deployment-setting.png" />
+
+Config the environment to the EC2 instance.
+
+<img src="https://i.ibb.co/jyLJXsS/deploy-env-config.png" />
+
+After configuration, I lauched the deployment, and oops it fails....
+
+<img src="https://i.ibb.co/wBLRDTQ/deploy-failed.png" />
+
+## <span className="error-section">An error I ran into was...👀</span>
+
+My first deployment attemp failed and by reading the error banner, I researched and guessed that the issue might be relevent to CodeDeploy agent wasn't running in the EC2. So I signed in the EC2 terminal to check if the Agent was active.
+
+<img src="https://i.ibb.co/LxpbDqd/codedeploy-agent-active.png" />
+
+From the terminal, it showed that the CodeDeploy agent was active. Then, I researched how to check the deployment log to find the error.
+
+<img src="https://i.ibb.co/17mKGdL/doc-view-log-file.png" />
+
+By following the Amazon doc instruction, I logged the deployment process and find the error:
+
+<img src="https://i.ibb.co/616xZKV/log-error.png" />
+
+It said that the appspec.yml file is empty. So I checked the file and found it somehow had no code in it that caused the problem.
+
+<img src="https://i.ibb.co/DVyjZsJ/appspec-empty.png" />
+
+I pushed the appspec.yml file again and made another deployment....and it failed again...🤦‍♀️
+
+<img src="https://i.ibb.co/61JBtPB/failed-warning.png" />
+
+<img src="https://i.ibb.co/4K0QVBm/log-error2.png" />
+
+I logged another error saying that the version should be "0.0" instead of "0.1". I then updated the appspec.yml file again and tried the deployment one more time.
+
+<img src="https://i.ibb.co/kqGstkC/deploy-success.png" />
+
+### Delployment succeed!
+
+The web page is live 🎉
+
+<img src="https://i.ibb.co/FbQYpSb/host-live.png" />
+
+In the next project (part five), I'm going to automate the entire pipeline (from CodeCommit to CodeDeploy) with AWS CloudFormation and CodePipeline!
+
+#### Big thanks to [@NextWork](https://www.nextwork.org/) for setting up this engaging challenge!

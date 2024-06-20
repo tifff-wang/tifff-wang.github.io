@@ -2,7 +2,7 @@
 title: DevOps AWS Series (Part-3)
 date: 2024-06-12
 cover: https://i.ibb.co/ZVmzQVv/Screenshot-2024-06-19-at-3-19-25-PM.png
-services: CodeBuild
+services: CodeBuild | S3
 published: true
 ---
 
@@ -54,17 +54,11 @@ Step 3: Secure the project's dependencies with AWS CodeArtifact
     Set the CodeCommit repo as resource. CodeBuild will fetch the repo from the CodeCommit, and compile and package into a WAR file.
     Code stored in Amazon S3, GitHub, Bitbucket and other providers can also be source for CodeBuild!
 
-<img
-    src="https://i.ibb.co/YXzrbMN/build-source-config.png"
-    alt="create codeArtifact domain repo panel"
-/>
+<img src="https://i.ibb.co/YXzrbMN/build-source-config.png" />
 
 -   Config the environment
 
-<img
-    src="https://i.ibb.co/hW5VnhD/build-env-config.png"
-    alt="create codeArtifact domain panel"
-/>
+<img src="https://i.ibb.co/hW5VnhD/build-env-config.png" />
 
 -   Choose a use buildspec.yml file
 
@@ -72,26 +66,17 @@ Step 3: Secure the project's dependencies with AWS CodeArtifact
 
 -   Config the build artifacts to set the S3 bucket to store the WAR file that will be produced.
 
-<img
-    src="https://i.ibb.co/mb2FPnv/build-artifacts-config.png"
-    alt="create codeArtifact domain panel"
-/>
+<img src="https://i.ibb.co/mb2FPnv/build-artifacts-config.png" />
 
 -   Config CloudWatch log. so that I can keep an eye on a record of what exactly happens during the build process. Very helpful for dignose issues when error occurs.
 
-<img
-    src="https://i.ibb.co/YQ9LfkZ/build-cloudwatch-log.png"
-    alt="create codeArtifact domain panel"
-/>
+<img src="https://i.ibb.co/YQ9LfkZ/build-cloudwatch-log.png" />
 
 #### 3. Modify the service role
 
 The new service role created by CodeBuild only gave minimum permissions which by default does not include access to CodeArtifact repository. So here I attach the "codeartifact-nextwork-consumer-policy" that I created in CodeArtifact to the service role.
 
-<img
-    src="https://i.ibb.co/JqHFNyq/build-service-role.png"
-    alt="create codeArtifact domain panel"
-/>
+<img src="https://i.ibb.co/JqHFNyq/build-service-role.png" />
 
 #### 4. Create the buildspec.yml file
 
@@ -105,26 +90,17 @@ The new service role created by CodeBuild only gave minimum permissions which by
     </p>
 </HighlightBlock>
 
-<img
-    src="https://i.ibb.co/cNxcZmM/buildspec-code.png"
-    alt="maven package flow"
-/>
+<img src="https://i.ibb.co/cNxcZmM/buildspec-code.png" />
 
 #### 4. Start the build
 
-<img
-    src="https://i.ibb.co/qd6V6zp/build-success.png"
-    alt="maven package flow"
-/>
+<img src="https://i.ibb.co/qd6V6zp/build-success.png" />
 
 #### 5. Check the S3 bucket
 
 The .zip file that contains the WAR file appears in the bucket. The build is done 🎉
 
-<img
-    src="https://i.ibb.co/SsXXzb5/zip-file-in-s3.png"
-    alt="the settings.xml file in IDE"
-/>
+<img src="https://i.ibb.co/SsXXzb5/zip-file-in-s3.png" />
 
 In the next project (part four), I'm going to deploy the project based on the WAR file that CodeBuild produced.
 
