@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import StackList from './stack-list'
 
-
 interface ProjectItem {
     anchor: string
     thumbnail: string
@@ -40,7 +39,6 @@ function ProjectSummary({ projects }: ProjectSummaryProps) {
                                         {project.summary}
                                     </Link>
                                 </div>
-                                <StackList stacks={project.stacks} />
                             </li>
                         )
                     })}
