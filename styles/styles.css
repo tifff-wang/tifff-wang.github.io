@@ -61,7 +61,7 @@ iframe {
 }
 
 .logo {
-    height: 20px;
+    height: 25px;
     margin-left: 30px;
 }
 
@@ -668,7 +668,7 @@ td {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top:5px;
+    padding-top: 5px;
 }
 
 .contact-icon {
@@ -801,10 +801,6 @@ aside button {
         width: 100%;
     }
 
-    .stack-list {
-        display: none;
-    }
-
     .summary-image {
         width: 60px;
         height: 60px;
@@ -897,6 +893,7 @@ aside button {
 
 .menu-icon {
     cursor: pointer;
+    margin-right: 30px;
 }
 
 .hamburger {
@@ -905,7 +902,6 @@ aside button {
     background-color: black;
     position: relative;
     transition: all 0.3s;
-    margin-right: 30px;
     z-index: 3000;
 }
 
@@ -967,7 +963,7 @@ aside button {
     background-color: #3b3b3b;
     padding: 10px;
     border-radius: 5px;
-    border:solid var(--accent-color) 1px;
+    border: solid var(--accent-color) 1px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -977,5 +973,9 @@ aside button {
 
     .navbar-links-container {
         display: none;
+    }
+
+    .nav-section {
+        align-items: center;
     }
 }
