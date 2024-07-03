@@ -668,6 +668,7 @@ td {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top:5px;
 }
 
 .contact-icon {
@@ -887,4 +888,94 @@ aside button {
     border-radius: 15px;
     background-color: var(--dark-color);
     z-index: 100;
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.hamburger {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    position: relative;
+    transition: all 0.3s;
+    margin-right: 30px;
+    z-index: 3000;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+
+.hamburger.open {
+    background-color: transparent;
+}
+
+.hamburger.open::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.hamburger.open::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 100%;
+    background-color: var(--light-color);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 20px;
+    padding-top: 80px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.mobile-menu.open {
+    right: 0;
+}
+
+.mobile-menu-contact {
+    background-color: #3b3b3b;
+    padding: 10px;
+    border-radius: 5px;
+    border:solid var(--accent-color) 1px;
+}
+
+@media only screen and (max-width: 600px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .navbar-links-container {
+        display: none;
+    }
 }

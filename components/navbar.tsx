@@ -1,6 +1,6 @@
 'use client'
 
-import NavbarLinks from "./navbar-links"
+import NavbarLinks from './navbar-links'
 
 function Navbar() {
     return (
