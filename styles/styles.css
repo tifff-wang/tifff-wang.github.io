@@ -157,7 +157,7 @@ iframe {
 .short-intro h2 {
     margin: 0;
     padding: 0;
-    font-size: 0.7rem;
+    font-size: 1rem;
     width: 80%;
 }
 
@@ -169,6 +169,12 @@ iframe {
     .tiff-portfolio-text-container {
         margin-bottom: 60px;
         width: 95%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #hero {
+        margin-top: 150px;
     }
 }
 
@@ -200,7 +206,6 @@ iframe {
 }
 
 .projects-container {
-    margin-bottom: 1000px;
     overflow: scroll;
     height: 100vh;
     scroll-snap-stop: normal;
@@ -333,8 +338,14 @@ iframe {
     }
 
     .project-item-container {
+        width: 100%;
         flex-direction: column;
         gap: 0;
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
     }
 
     .img-container {
@@ -342,7 +353,7 @@ iframe {
     }
 
     .project-info-container {
-        width: 80%;
+        width: 88%;
         margin: 30px auto 0 auto;
     }
 

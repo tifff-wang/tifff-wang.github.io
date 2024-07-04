@@ -11,7 +11,7 @@ export default function RootLayout({
         <html lang="en">
             <head>
                 <meta charSet="utf-8" />
-                <link rel="icon" href="/Logo.png" />
+                <link rel="icon" href="images/profile.png" />
                 <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"
