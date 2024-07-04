@@ -345,15 +345,15 @@ iframe {
 
     .project-title {
         font-size: 1.25rem;
-        line-height: 1.5rem;
+        line-height: 1.25rem;
     }
 
     .img-container {
-        width: 90%;
+        width: 95%;
     }
 
     .project-info-container {
-        width: 88%;
+        width: 90%;
         margin: 30px auto 0 auto;
     }
 
