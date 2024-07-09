@@ -839,7 +839,7 @@ aside button {
 
 .profile-image-container {
     width: 60vw;
-    max-width: 300px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;

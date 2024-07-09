@@ -7,7 +7,7 @@ async function AboutPage() {
             <div className="about-me-container">
                 <div className="profile-image-container">
                     <img
-                        src="https://i.ibb.co/z87KWZ4/about-me-img.jpg"
+                        src="/images/about-me.jpg"
                         alt="Tiff with her cat"
                         className="profile-image"
                     />
