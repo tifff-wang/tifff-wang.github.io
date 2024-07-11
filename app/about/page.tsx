@@ -11,18 +11,6 @@ async function AboutPage() {
                         alt="Tiff with her cat"
                         className="profile-image"
                     />
-
-                    <div className="button-container">
-                        <div className="hero-section-button-animate"></div>
-                        <div className="hero-section-button">
-                            <Link
-                                href="https://drive.google.com/file/d/14wbq_boUuivqSpx_6mYn4skL99_wDf37/view?usp=sharing"
-                                target="_blank"
-                            >
-                                CheckMyResume()
-                            </Link>
-                        </div>
-                    </div>
                 </div>
                 <div className="self-intro">
                     <p>
