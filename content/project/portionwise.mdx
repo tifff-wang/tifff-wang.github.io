@@ -1,31 +1,39 @@
 ---
 title: PortionWise Backend
-description: Backend app for organising cooking ingredients portions
-date: 2024-06-15
-cover: images/design-thumbnail.png.png
-thumbnail: images/thumbnails/design-thumbnail.png
-summary: PortionWise
+description: Backend for an app that manages cooking ingredient portions
+date: 2024-07-01
+cover: images/portionWise-cover.png
+thumbnail: images/thumbnails/portionWise-thumbnail.png
+summary: .NET Backend
 anchor: portion-wise
-stacks: .NET | C# | SQLite
+stacks: .NET | C# | EF | SQLite
 website: ''
-github: ''
-published: false
+github: 'https://github.com/tifff-wang/PortionWise-Backend'
+published: true
 ---
 
-##### Nov 2023
+##### July 2024
 
-# DescripMini
+# PortionWise Backend
 
 ## Project Overview
 
-DescipMini is a small web form that connects to the OpenAI API. It
-automatically generates a short description for users based on their
-form inputs when they want to create second-hand selling listings.
+This project is for the backend of PortionWise, an app that manages cooking receipe ingredient portions. It contains CRUD API endpoints for both recipes and ingredients.
 
-## Project links
+The project demonstrates a clean architecture implementation for a C# .NET backend with embedded Sqlite. The main components of this architecture are Controllers, Services, Repositories, Data Access Objects (DAOs), API, and different data models such as DTO, BO, Entity, and DL.
 
--   [View source code](https://github.com/tifff-wang/descrip-mini)
+<img
+    src="/images/data_model_naming_convention.png"
+    alt="data model naming convention diagram"
+/>
 
-## Project Presentation
+Through this project, I learned how to ensure the separation of concerns and enhance the maintainability of the codebase, as well as how to implement auto-mapping to efficiently transfer data between models and layers.
+
+## Project link
+
+-   [View source code](https://github.com/tifff-wang/PortionWise-Backend)
 
 ## What's next?
+
+-   Integrate with a nutrition API to fetch and display nutritional information for each recipe based on ingredient portions.
+-   Move on to build the front-end to make it a full-stack project.
