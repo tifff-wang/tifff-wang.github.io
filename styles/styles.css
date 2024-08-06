@@ -741,7 +741,7 @@ aside button {
     height: 100px;
     object-fit: cover;
     border-radius: 50px;
-    animation: fadeIn 2s;
+    animation: fadeIn 1s;
 }
 
 @keyframes fadeIn {
@@ -1009,10 +1009,10 @@ aside button {
     border-radius: 50px;
     position: relative;
     overflow: hidden;
-    background-color: #b4b4b4;
+    background-color: #d4d4d4;
 }
 
-.skeleton-box::after {
+.skeleton-box.loading::after {
     position: absolute;
     top: 0;
     right: 0;
@@ -1034,4 +1034,8 @@ aside button {
     100% {
         transform: translateX(100%);
     }
+}
+
+.skeleton-box.finished::after {
+    content: none;
 }

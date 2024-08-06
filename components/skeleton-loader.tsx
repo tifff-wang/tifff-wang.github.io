@@ -13,11 +13,18 @@ function SkeletonLoader({ children, loadingTime = 2000 }) {
         }
     }, [loading])
 
-    if (loading) {
-        return <div className="skeleton-box"></div>
-    }
-
-    return <div>{children}</div>
+    return (
+        <div className={`skeleton-box ${loading ? 'loading' : 'finished'}`}>
+            <div
+                style={{
+                    display: loading ? 'none' : 'block',
+                    overflow: 'visible',
+                }}
+            >
+                {children}
+            </div>
+        </div>
+    )
 }
 
 export default SkeletonLoader
