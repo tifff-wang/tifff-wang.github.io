@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import StackList from './stack-list'
+import SkeletonLoader from './skeleton-loader'
 
 interface ProjectItem {
     anchor: string
@@ -26,12 +26,14 @@ function ProjectSummary({ projects }: ProjectSummaryProps) {
                             <li key={project.slug}>
                                 <div className="summary-image-container">
                                     <Link href={`/project/#${project.anchor}`}>
-                                        <img
-                                            id=""
-                                            src={project.thumbnail}
-                                            alt=""
-                                            className="summary-image"
-                                        />
+                                        <SkeletonLoader loadingTime={800}>
+                                            <img
+                                                id=""
+                                                src={project.thumbnail}
+                                                alt=""
+                                                className="summary-image"
+                                            />
+                                        </SkeletonLoader>
                                     </Link>
                                 </div>
                                 <div className="summary-anchor-link">
