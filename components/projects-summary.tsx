@@ -27,7 +27,7 @@ function ProjectSummary({ projects }: ProjectSummaryProps) {
                             <li key={project.slug}>
                                 <div className="summary-image-container">
                                     <Link href={`/project/#${project.anchor}`}>
-                                        <SkeletonLoader loadingTime={500}>
+                                        <SkeletonLoader loadingTime={800}>
                                             <Image
                                                 src={project.thumbnail}
                                                 alt={project.summary}
