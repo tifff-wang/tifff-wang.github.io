@@ -15,7 +15,6 @@ const nextConfig = {
         return config
     },
     reactStrictMode: true,
-    output: 'export', // Additional Next.js configurations
 }
 
 class VeliteWebpackPlugin {
