@@ -1,15 +1,14 @@
 import { projects } from '@/.velite'
 import ContactMethods from '@/components/contact-methods'
+import PixelCover from '@/components/pixel-cover'
 import PostItem from '@/components/project-item'
 import { sortProjects } from '@/lib/utils'
 import Link from 'next/link'
 
 export default function Home() {
-    const sortedProjects = sortProjects(
-        projects.filter((project) => project.published)
-    )
     return (
         <>
+            <PixelCover />
             <section id="hero">
                 <div className="tiff-portfolio-text-container">
                     <div className="title-container">
