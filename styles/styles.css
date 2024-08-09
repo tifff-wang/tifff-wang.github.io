@@ -1058,8 +1058,14 @@ aside button {
     pointer-events: none;
 }
 
+.pixel-background {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(183, 111, 190);
+}
+
 .pixel-column {
-    width: 4vw;
+    width: 5vw;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -1067,6 +1073,6 @@ aside button {
 
 .pixel-block {
     width: 100%;
-    height: 4vw;
-    background-color: var(--main-color);
+    height: 5vw;
+    background-color: rgb(183, 111, 190);
 }

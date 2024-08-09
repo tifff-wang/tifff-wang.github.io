@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import useWindowDimensions from '@/hooks/useWindowDimensions'
 
 const pixelAnimation = {
     initial: {
@@ -9,12 +10,12 @@ const pixelAnimation = {
 
     open: (index: number) => ({
         opacity: 1,
-        transition: { duration: 0, delay: 0.03 * index },
+        transition: { duration: 0, delay: 0.04 * index },
     }),
 
     closed: (index: number) => ({
         opacity: 0,
-        transition: { duration: 0, delay: 0.03 * index },
+        transition: { duration: 0, delay: 0.04 * index },
     }),
 }
 
@@ -26,9 +27,14 @@ function PixelCover() {
     }, [])
 
     const getPixelBlocks = () => {
-        const { innerWidth, innerHeight } = window
-        const pixelSize = innerWidth * 0.04
-        const amountOfPixels = Math.ceil(innerHeight / pixelSize)
+        const { width, height } = useWindowDimensions()
+
+        if (width == 0 || height == 0) {
+            return <div className="pixel-background"></div>
+        }
+
+        const pixelSize = width * 0.05
+        const amountOfPixels = Math.ceil(height / pixelSize)
         const pixelRadomDelays = shuffle(
             [...Array(amountOfPixels)].map((pixel, index) => index)
         )
@@ -49,7 +55,11 @@ function PixelCover() {
     return (
         <div className="pixel-background-container">
             {[...Array(25)].map((_, i) => {
-                return <div className="pixel-column">{getPixelBlocks()}</div>
+                return (
+                    <div key={i} className="pixel-column">
+                        {getPixelBlocks()}
+                    </div>
+                )
             })}
         </div>
     )
