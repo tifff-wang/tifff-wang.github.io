@@ -10,12 +10,12 @@ const pixelAnimation = {
 
     open: (index: number) => ({
         opacity: 1,
-        transition: { duration: 0, delay: 0.04 * index },
+        transition: { duration: 0, delay: 0.02 * index },
     }),
 
     closed: (index: number) => ({
         opacity: 0,
-        transition: { duration: 0, delay: 0.04 * index },
+        transition: { duration: 0, delay: 0.02 * index },
     }),
 }
 
@@ -23,7 +23,7 @@ function PixelCover() {
     const [isVisible, setIsVisible] = useState(true)
 
     useEffect(() => {
-        setTimeout(() => setIsVisible(false), 1000)
+        setTimeout(() => setIsVisible(false), 500)
     }, [])
 
     const getPixelBlocks = () => {

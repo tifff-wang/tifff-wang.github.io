@@ -1018,6 +1018,13 @@ aside button {
     background-color: #d4d4d4;
 }
 
+@media only screen and (max-width: 800px) {
+    .skeleton-box {
+        height: 60px;
+        width: 60px;
+    }
+}
+
 .skeleton-box.loading::after {
     position: absolute;
     top: 0;
