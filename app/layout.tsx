@@ -1,7 +1,6 @@
 import Navbar from '@/components/navbar'
 import '../styles/styles.css'
 import Footer from '@/components/footer'
-import PixelCover from '@/components/pixel-cover'
 
 export default function RootLayout({
     children,
