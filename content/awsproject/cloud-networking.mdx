@@ -1,0 +1,82 @@
+---
+title: Cloud Networking
+date: 2024-08-27
+cover: https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/aws-networking-images/VPC-project-cover.png
+services: VPC | Subnet | Route Table | Security Group | Network ACL
+published: true
+---
+
+##### Aug 2024
+
+# Build a Virtual Private Cloud (VPC)
+
+When I'm learning the AWS services, I always found the VPC related concepts are some of the tricky part to get my heads around. In this project, I learned the core essentials of building an Amazon Virtual Private Cloud (VPC), which has helped me to get a better understanding of the purposes and raltionship of the VPC set up.
+
+<img
+    src="https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/aws-networking-images/diagram3.png"
+    alt="VPC diagram"
+/>
+
+In this project, I created:
+
+-   💡 **An Amazon VPC** with configured IPv4 CIDR block
+-   💡 **A public subnet** with auto-assigned public IP addresses
+-   💡 **An internet gateway** associate to the VPC
+-   💡 **A route table** to send Internet-bound traffic to your internet gateway
+-   💡 **A security group** to control inbound and outbound traffic at a resource level, specifying allowed IP addresses, protocols, and ports.
+-   💡 **A network ACL** (Access Control List) as an additional layer of security, managing both incoming and outgoing traffic at the subnet level.
+-   💡 **A private subnet** with a different CIDR block to avoid an overlap with your public subnet.
+-   💡 **A private route** table that only allow local target.
+-   💡 **A private network** ACL that deny both inbound and outbound traffic.
+
+After working through the process, I conclude the relationships of the services as below:
+
+<HighlightBlock color="#f9e4ff">
+    <ul>
+        <li>**AWS Cloud Region** - Country</li>
+        <li>**VPC** - City</li>
+        <li>**Subnet** - Neibourhood in the city </li>
+        <li>**Internet gateway** - GPS in the city </li>
+        <li>
+            **Network ACLs** - Security guard at your neibourhood entrance and
+            exit{' '}
+        </li>
+        <li>**Resources** - Buildings in your neibourhood</li>
+        <li>
+            **Surcurity group** - Security guard at your building entrance and
+            exit
+        </li>
+        <li>**IP address** - Street addresses for the resources </li>
+        <li>
+            **Protocols (ex. HTTP, FTP)** - Different vehicles that deliver data
+            in different ways{' '}
+        </li>
+        <li>
+            **Port numbers** - Delivery dock at the building for a specific
+            vehicle (protocol)
+        </li>
+    </ul>
+</HighlightBlock>
+
+## 📸 Dive deeper into my journey by checking out the documentation below:
+
+<a
+    href="https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/aws-networking-images/NextWork+-+Build+a+Virtual+Private+Cloud+document.pdf"
+    target="_blank"
+>
+    📝 Create VPC, Subnet, and Internet Gateway
+</a>
+<a
+    href="https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/aws-networking-images/NextWork-aws+networks+security+document.pdf"
+    target="_blank"
+>
+    📝 Setup Security Group and Network ACL
+</a>
+<a
+    href="https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/aws-networking-images/NextWork-aws-networks-private-subnet.pdf"
+    target="_blank"
+>
+    📝 Create a private subnet
+</a>
+
+#### Big thanks to [@NextWork](https://www.nextwork.org/) for setting up this engaging challenge!
