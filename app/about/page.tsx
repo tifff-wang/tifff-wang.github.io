@@ -1,11 +1,9 @@
 'use client'
+import SelfIntroSection from '@/components/about-me/self-intro'
 import AboutMeSection from '../../components/about-me/about-me-section'
 import { useSpring } from 'framer-motion'
 
 const aboutMe = [
-    {
-        section: 'general',
-    },
     {
         section: 'tech-skill',
     },
@@ -36,6 +34,7 @@ function AboutPage() {
 
     return (
         <section onMouseMove={mouseMove} className="about-me">
+            <SelfIntroSection mousePosition={mousePosition} />
             {aboutMe.map(({ section }, i) => {
                 return (
                     <AboutMeSection

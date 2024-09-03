@@ -1102,15 +1102,28 @@ aside button {
 }
 
 .gallery-vignette {
-    height: 20vw;
+    height: 15vw;
     width: 15vw;
     position: fixed;
-    top: 0;
-    border-radius: 20px;
+    top: 100px;
+    border-radius: 100px;
     overflow: hidden;
 }
 
 .gallery-vignette img {
     width: 100%;
     object-fit: cover;
+}
+
+.self-intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.self-intro {
+    font-size: 3vw;
+    line-height: 3.2rem;
+    width: 90%;
+    margin: auto;
+    text-align: center;
 }
