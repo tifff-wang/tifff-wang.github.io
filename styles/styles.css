@@ -1120,7 +1120,6 @@ aside button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0;
     background-color: var(--light-color);
 }
 
@@ -1133,4 +1132,41 @@ aside button {
     width: 50vw;
 }
 
+.tech-skills-container,
+.tech-skills {
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+.tech-skills h1 {
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+.tech-skills ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50vw;
+    color: var(--dark-color);
+    gap: 10px;
+}
+
+.tech-skills ul li {
+    border: none;
+    padding: 5px 10px;
+    height: 60px;
+    min-width: 50px;
+    background-color: var(--light-color);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    box-shadow: -2px -2px 5px #dadada, 10px 10px 20px #ffffff;
+    background: linear-gradient(315deg, #e6e6e6, #f0f0f0);
+}
+
+.fun-facts-container{
+  background-color: var(--dark-color);
+}

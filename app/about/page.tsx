@@ -2,6 +2,8 @@
 import SelfIntroSection from '@/components/about-me/self-intro'
 import AboutMeSection from '../../components/about-me/about-me-section'
 import { useSpring } from 'framer-motion'
+import TechSkillsSection from '@/components/about-me/tech-skills'
+import FunFactsSection from '@/components/about-me/fun-facts'
 
 const aboutMe = [
     {
@@ -35,15 +37,8 @@ function AboutPage() {
     return (
         <section onMouseMove={mouseMove} className="about-me">
             <SelfIntroSection mousePosition={mousePosition} />
-            {aboutMe.map(({ section }, i) => {
-                return (
-                    <AboutMeSection
-                        mousePosition={mousePosition}
-                        section={section}
-                        key={i}
-                    />
-                )
-            })}
+            <TechSkillsSection mousePosition={mousePosition} />
+            <FunFactsSection mousePosition={mousePosition} />
         </section>
     )
 }

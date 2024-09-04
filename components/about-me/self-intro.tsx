@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 function SelfIntroSection({ mousePosition }) {
     const { x, y } = mousePosition
     return (
-        <div className="gallery">
+        <section className="gallery">
             <div className="gallery-background self-intro-container">
                 <div className="self-intro">
                     <p>
@@ -30,12 +30,12 @@ function SelfIntroSection({ mousePosition }) {
 
             <motion.div className="gallery-vignette" style={{ x, y }}>
                 <Image
-                    src={`/images/about-me/general/vignette.jpg`}
+                    src={`/images/about-me/self-intro/vignette.jpg`}
                     alt="image"
                     fill
                 />
             </motion.div>
-        </div>
+        </section>
     )
 }
 
