@@ -1117,13 +1117,20 @@ aside button {
 
 .self-intro-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0;
+    background-color: var(--light-color);
 }
+
 .self-intro {
-    font-size: 3vw;
-    line-height: 3.2rem;
-    width: 90%;
+    font-size: 1rem;
+    line-height: 1.5rem;
     margin: auto;
-    text-align: center;
+    text-align: start;
+    color: var(--dark-color);
+    width: 50vw;
 }
+
+
