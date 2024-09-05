@@ -1167,6 +1167,69 @@ aside button {
     background: linear-gradient(315deg, #e6e6e6, #f0f0f0);
 }
 
-.fun-facts-container{
-  background-color: var(--dark-color);
+.main h1 {
+    text-align: center;
+    color: var(--main-color);
+    font-size: 2rem;
+    padding-top: 20vh;
+    margin:0;
+}
+
+.card-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    margin-top: -15vh;
+}
+
+.card {
+    height: 500px;
+    width: 800px;
+    border-radius: 25px;
+}
+
+.fun-fact-gallery {
+    height: 350vh;
+}
+
+.card h2 {
+    text-align: center;
+    margin: 0px;
+    font-size: 28px;
+}
+
+.body {
+    display: flex;
+    height: 100%;
+    margin-top: 50px;
+    gap: 50px;
+}
+
+.description {
+    width: 40%;
+    position: relative;
+    top: 10%;
+}
+
+.description p {
+    font-size: 16px;
+}
+
+.image {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.inner {
+    width: 100%;
+    height: 100%;
+}
+.inner img {
+    object-fit: cover;
 }
