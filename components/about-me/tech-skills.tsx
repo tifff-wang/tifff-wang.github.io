@@ -34,6 +34,7 @@ function TechSkillsSection({ mousePosition }) {
         'Express',
         'SQLite3',
         'PostgreSQL',
+        'AWS',
     ]
     return (
         <section className="gallery">

@@ -1129,7 +1129,55 @@ aside button {
     margin: auto;
     text-align: start;
     color: var(--dark-color);
-    width: 50vw;
+    width: 55vw;
+}
+
+.first-sentence {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    height: 20px;
+}
+
+.rotating-words {
+    overflow: hidden;
+    height: 30px; /* Adjust height to fit one word at a time */
+    margin: 0 5px 4px 5px;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.rotating-words span {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    animation: spin 8s linear infinite; /* Adjust timing as necessary */
+}
+
+@keyframes spin {
+    0%,
+    16% {
+        transform: translateY(0%);
+    }
+    20%,
+    36% {
+        transform: translateY(-100%);
+    }
+    40%,
+    56% {
+        transform: translateY(-200%);
+    }
+    60%,
+    76% {
+        transform: translateY(-300%);
+    }
+    80%,
+    96% {
+        transform: translateY(-400%);
+    }
+    100% {
+        transform: translateY(-500%); /* Reset to start smoothly */
+    }
 }
 
 .tech-skills-container,
@@ -1167,12 +1215,12 @@ aside button {
     background: linear-gradient(315deg, #e6e6e6, #f0f0f0);
 }
 
-.main h1 {
+.fun-facts h1 {
     text-align: center;
     color: var(--main-color);
     font-size: 2rem;
     padding-top: 20vh;
-    margin:0;
+    margin: 0;
 }
 
 .card-container {
@@ -1190,6 +1238,9 @@ aside button {
     height: 500px;
     width: 800px;
     border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .fun-fact-gallery {
@@ -1199,37 +1250,23 @@ aside button {
 .card h2 {
     text-align: center;
     margin: 0px;
-    font-size: 28px;
+    margin-top: 5px;
+    font-size: 24px;
 }
 
-.body {
-    display: flex;
-    height: 100%;
-    margin-top: 50px;
-    gap: 50px;
-}
-
-.description {
-    width: 40%;
-    position: relative;
-    top: 10%;
-}
-
-.description p {
+.card p {
     font-size: 16px;
+    text-align: center;
+    width: 80%;
 }
 
-.image {
-    position: relative;
-    width: 60%;
-    height: 100%;
-    border-radius: 25px;
-    overflow: hidden;
+.fun-fact-image-container {
+    height: 60%;
+    width: 80%;
+    margin-top: 10px;
+    display: flex;
 }
-.inner {
-    width: 100%;
-    height: 100%;
-}
-.inner img {
-    object-fit: cover;
+
+.fun-fact-image-container img {
+    object-fit: contain;
 }

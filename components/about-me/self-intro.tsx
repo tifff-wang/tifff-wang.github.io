@@ -7,13 +7,19 @@ function SelfIntroSection({ mousePosition }) {
         <section className="gallery">
             <div className="gallery-background self-intro-container">
                 <div className="self-intro">
+                    <p>Hello 👋! I'm Tiff,</p>
+                    <span className="first-sentence">
+                        a
+                        <div className="rotating-words">
+                            <span>curious</span>
+                            <span>communicative</span>
+                            <span>creative</span>
+                            <span>proactive</span>
+                            <span>artistic</span>
+                        </div>
+                        full-stack developer.
+                    </span>
                     <p>
-                        {' '}
-                        Hello 👋! I'm Tiff, a junior full-stack developer with a
-                        passion for building engaging web applications.
-                    </p>
-                    <p>
-                        {' '}
                         My journey into the world of tech has been quite unique,
                         transitioning from a background in early childhood
                         education and studies in accounting and digital design.
@@ -22,10 +28,10 @@ function SelfIntroSection({ mousePosition }) {
                         This diverse experience has enriched my approach to
                         software development, especially in communication,
                         creativity, problem solving, and understanding user's
-                        needs.
+                        needs. I'm passion for trying new things and building
+                        engaging web applications that impact people's lives.
                     </p>
                 </div>
-                <p></p>
             </div>
 
             <motion.div className="gallery-vignette" style={{ x, y }}>

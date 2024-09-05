@@ -4,8 +4,7 @@ function Footer() {
             <div>
                 <hr />
                 <p className="copyright">
-                    ©Copyright 2023 by Tiffany Wang. All rights reserved. Made
-                    with NextJs.
+                    ©Copyright 2023 by Tiffany Wang. Made with Next.js
                 </p>
             </div>
         </footer>

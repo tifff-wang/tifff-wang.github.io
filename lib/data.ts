@@ -1,30 +1,34 @@
 export const funFactsData = [
     {
-        title: 'UI/UX',
+        title: 'Putting my design hat on',
         description:
-            'Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.',
-        image: 'rock.jpg',
-        color: '#BBACAF',
+            'I am passinate about creating user-centered software solutions. I love participating in UI/UX design thinking sessions with designers and have learned to use Adobe XD, Illustrator, and Figma to prototype. ',
+        imageUrl:
+            'https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/digital-design-works/mobile-design.png',
+        color: '#9663a6',
     },
     {
-        title: 'Duolingo',
+        title: 'Learning on Duolingo',
         description:
-            'This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).',
-        image: 'tree.jpg',
-        color: '#977F6D',
+            'I am actively learning Japanese on Duolingo at the moment. It’s always a refreshing break to switch my focus from computer languages to learning a natural language.',
+        imageUrl:
+            'https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/fun-facts-photos/duolingo.PNG',
+        color: '#688770',
     },
     {
-        title: 'Cooking',
+        title: 'Cooking like a chef',
         description:
-            'Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.',
-        image: 'water.jpg',
-        color: '#C2491D',
+            'Cooking is my playground for creativity. I love experimenting with new recipes and global cuicins, it’s all about mixing the right ingredients with feeling and love!',
+        imageUrl:
+            'https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/fun-facts-photos/cooking.jpg',
+        color: '#9663a6',
     },
     {
-        title: 'My Cutiest Furry Friend ',
+        title: 'Last but certainly not least, being with my cat!',
         description:
-            'Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.',
-        image: 'water.jpg',
-        color: '#b2288a',
+            'Give my cutiest furry friend a tummy rub is my favourite thing! Introducing TURUPY, an exotic shorthair cat who has more than 1200 followers on social media 😺!',
+        imageUrl:
+            'https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/fun-facts-photos/turupy1.png',
+        color: '#857163',
     },
 ]
