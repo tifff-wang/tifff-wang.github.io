@@ -12,7 +12,7 @@ function NavbarLinks() {
     return (
         <>
             <div className="hamburger-menu">
-                <div className="menu-icon" onClick={toggleMenu}>
+                <div className="hamburger-icon-container" onClick={toggleMenu}>
                     <div className={`hamburger ${isMenuOpen ? 'open' : ''}`}>
                         <span></span>
                         <span></span>
@@ -25,7 +25,7 @@ function NavbarLinks() {
                     </a>
 
                     <a href="/about" className="navbar-link">
-                        About<span className="brackets">()</span>
+                        AboutMe<span className="brackets">()</span>
                     </a>
                     <div className="mobile-menu-contact">
                         <ContactMethods />
@@ -38,7 +38,7 @@ function NavbarLinks() {
                 </a>
 
                 <a href="/about" className="navbar-link">
-                    About<span className="brackets">()</span>
+                    AboutMe<span className="brackets">()</span>
                 </a>
 
                 <ContactDropdown />

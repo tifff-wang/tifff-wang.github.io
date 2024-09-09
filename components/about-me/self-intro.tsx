@@ -27,9 +27,10 @@ function SelfIntroSection({ mousePosition }) {
                     <p>
                         This diverse experience has enriched my approach to
                         software development, especially in communication,
-                        creativity, problem solving, and understanding user's
-                        needs. I'm passion for trying new things and building
-                        engaging web applications that impact people's lives.
+                        creativity, problem solving, and collaboration with
+                        cross-functional teams. I am passionate about learning
+                        new technologies and building engaging web applications
+                        that positively impact people's lives.
                     </p>
                 </div>
             </div>

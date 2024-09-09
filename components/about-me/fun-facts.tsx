@@ -17,7 +17,7 @@ function FunFactsSection({ mousePosition }) {
         <section className="gallery fun-fact-gallery">
             <div className="gallery-background fun-facts-container">
                 <div ref={container} className="fun-facts">
-                    <h1>Some of my interests are ...</h1>
+                    <h1>When I'm not working, I love...</h1>
                     {funFactsData.map((project, i) => {
                         const scaleRange = [i * 0.25, 1]
                         const scaleAmount = 1 - (funFactsData.length - i) * 0.04

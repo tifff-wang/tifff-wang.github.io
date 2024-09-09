@@ -2,7 +2,7 @@ export const funFactsData = [
     {
         title: 'Putting my design hat on',
         description:
-            'I am passinate about creating user-centered software solutions. I love participating in UI/UX design thinking sessions with designers and have learned to use Adobe XD, Illustrator, and Figma to prototype. ',
+            'I love checking out the latest trends in user-centered design through blogs and video content every now and then. I enjoy participating in design thinking sessions with designers and have learned to use Adobe XD, Illustrator, and Figma for prototyping.',
         imageUrl:
             'https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/digital-design-works/mobile-design.png',
         color: '#9663a6',
@@ -18,7 +18,7 @@ export const funFactsData = [
     {
         title: 'Cooking like a chef',
         description:
-            'Cooking is my playground for creativity. I love experimenting with new recipes and global cuicins, it’s all about mixing the right ingredients with feeling and love!',
+            'Cooking is my playground for creativity. I love experimenting with new recipes from different cultures, it’s all about mixing the right ingredients with feeling and love!',
         imageUrl:
             'https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/fun-facts-photos/cooking.jpg',
         color: '#9663a6',

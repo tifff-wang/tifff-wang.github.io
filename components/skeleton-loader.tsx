@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-function SkeletonLoader({ children, loadingTime = 2000 }) {
+function SkeletonLoader({ children, loadingTime = 1000 }) {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
