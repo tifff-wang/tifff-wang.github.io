@@ -1046,8 +1046,8 @@ aside button {
     min-height: 100px;
     max-width: 170px;
     position: fixed;
-    top: 100px;
-    left: 50px;
+    top: 160px;
+    left: 80px;
     border-radius: 100px;
     overflow: hidden;
 }

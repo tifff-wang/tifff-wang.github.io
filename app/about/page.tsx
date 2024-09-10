@@ -17,10 +17,8 @@ function AboutPage() {
     }
 
     const mouseMove = (e) => {
-        const { clientX, clientY } = e
-        const targetX = clientX - (window.innerWidth / 3) * 0.4
+        const { clientY } = e
         const targetY = clientY - (window.innerWidth / 3) * 0.6
-        mousePosition.x.set(targetX)
         mousePosition.y.set(targetY)
     }
 
