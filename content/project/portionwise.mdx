@@ -22,7 +22,9 @@ published: true
 
 ## Project Overview
 
-This project is for the backend of PortionWise, an app that manages cooking receipe ingredient portions. It contains CRUD API endpoints for both recipes and ingredients.
+This project is for the backend of PortionWise, an app that manages cooking receipe ingredient portions. It contains CRUD API endpoints for both recipes and ingredients, and integrated with a nutrition API to fetch and display nutritional information for each recipe based on ingredient portions.
+
+### Project structure
 
 The project demonstrates a clean architecture implementation for a C# .NET backend with embedded Sqlite. The main components of this architecture are Controllers, Services, Repositories, Data Access Objects (DAOs), API, and different data models such as DTO, BO, Entity, and DL.
 
@@ -31,13 +33,18 @@ The project demonstrates a clean architecture implementation for a C# .NET backe
     alt="data model naming convention diagram"
 />
 
-Through this project, I learned how to ensure the separation of concerns and enhance the maintainability of the codebase, as well as how to implement auto-mapping to efficiently transfer data between models and layers.
+### Unit test
 
-## Project link
+The project reaches more than 80% testing coverage by using Xunit as the testing framework to perform unit tests on each method across the 4 component layers of the application, ensuring that both happy and unhappy pathes are validated.
 
--   [View source code](https://github.com/tifff-wang/PortionWise-Backend)
+<img src="/images/test_coverage.png" alt="testing coverage report" />
 
-## What's next?
+Through this project, I learned how to ensure the separation of concerns and enhance
+the maintainability of the codebase, as well as how to implement auto-mapping to
+efficiently transfer data between models and layers.
 
--   Integrate with a nutrition API to fetch and display nutritional information for each recipe based on ingredient portions.
--   Move on to build the front-end to make it a full-stack project.
+### Project link
+
+<a href="https://github.com/tifff-wang/PortionWise-Backend" target="_blank">
+    View source code
+</a>
