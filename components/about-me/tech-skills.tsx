@@ -44,7 +44,7 @@ function TechSkillsSection({ mousePosition }) {
 
             <motion.div className="gallery-vignette" style={{ x, y }}>
                 <Image
-                    src={`/images/about-me/tech-skill/vignette.png`}
+                    src={`/images/about-me/tech-skill/vignette.jpg`}
                     alt="image"
                     fill
                 />
