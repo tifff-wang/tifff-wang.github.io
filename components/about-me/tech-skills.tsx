@@ -47,6 +47,7 @@ function TechSkillsSection({ mousePosition }) {
                     src={`/images/about-me/tech-skill/vignette.jpg`}
                     alt="image"
                     fill
+                    priority
                 />
             </motion.div>
         </section>

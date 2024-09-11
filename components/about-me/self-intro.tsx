@@ -40,6 +40,7 @@ function SelfIntroSection({ mousePosition }) {
                     src={`/images/about-me/self-intro/vignette.jpg`}
                     alt="image"
                     fill
+                    priority
                 />
             </motion.div>
         </section>
