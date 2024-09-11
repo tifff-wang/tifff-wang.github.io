@@ -1,8 +1,5 @@
-import { projects } from '@/.velite'
 import ContactMethods from '@/components/contact-methods'
 import PixelCover from '@/components/pixel-cover'
-import PostItem from '@/components/project-item'
-import { sortProjects } from '@/lib/utils'
 import Link from 'next/link'
 
 export default function Home() {
