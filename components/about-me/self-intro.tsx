@@ -28,9 +28,10 @@ function SelfIntroSection({ mousePosition }) {
                         This diverse experience has enriched my approach to
                         software development, especially in communication,
                         creativity, problem solving, and collaboration with
-                        cross-functional teams. I am passionate about learning
-                        new technologies and building engaging web applications
-                        that positively impact people's lives.
+                        cross-functional teams. I am eager to continue learning
+                        and growing in this ever-evolving field, and
+                        collaborating with people to create engaging web
+                        applications that positively impact people's lives ✨.
                     </p>
                 </div>
             </div>
