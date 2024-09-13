@@ -1037,6 +1037,10 @@ aside button {
     position: relative;
 }
 
+.about-me {
+    margin-bottom: 80px;
+}
+
 /* vignette image */
 .gallery-vignette {
     height: 15vw;
@@ -1294,4 +1298,5 @@ footer {
     color: #b8b8b8;
     font-size: 0.8rem;
     font-family: system-ui;
+    border-top: var(--divid-color) solid 0.5px;
 }
