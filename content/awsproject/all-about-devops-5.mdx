@@ -1,0 +1,81 @@
+---
+title: DevOps AWS Series (Part-5)
+date: 2024-06-25
+cover: images/aws-images/codepipeline-project-cover.png
+services: CodePipeline
+published: true
+---
+
+##### June 2024
+
+# Automate software releases with AWS CodePipeline
+
+## In this project, I learned how to:
+
+-   💡 Set up the pipeline.
+-   💡 Execute the pipeline.
+-   💡 Release a change.
+-   💡 Trigger a rollback.
+
+<img src="https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/aws-codedeploy-images/deploy-flow.png" />
+
+### ✅ Steps completed from previous project sections:
+
+Step 1: Setting up a web app and IDE in the Cloud
+
+Step 2: Create a Repository in AWS CodeCommit
+
+Step 3: Secure the project's dependencies with AWS CodeArtifact
+
+Step 4: Package an App with AWS CodeBuild
+
+Step 5: Deploy the App with AWS CodeDeploy
+
+## ⏭️ Step 6: Automate the entire pipeline (from CodeCommit to CodeDeploy) with AWS CodePipeline.
+
+#### 1. Set up a new pipeline in CodePipeline and configured the source, build and deploy stages in your pipeline.
+
+<img src="https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/aws-codepipeline-images/source-stage.png" />
+
+<img src="https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/aws-codepipeline-images/build-stage.png" />
+
+#### 2. Execute a pipeline
+
+I learned what it means when the pipeline is running, watching your code being automatically tested, built, and deployed step by step.
+
+<img src="https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/aws-codepipeline-images/run-pipeline.png" />
+
+#### 3. Release a change
+
+I added the landing page html file to my local file and commit and pushed the changes to the CodeCommit repository. The pipeline executes automatically where my latest version of your code is tested, built, and deployed without manual intervention.
+
+<img src="https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/aws-codepipeline-images/release-change.png" />
+
+The web page is live 🎉
+
+<img src="https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/aws-codedeploy-images/host-live.png" />
+
+#### 4. Trigger a rollback
+
+<img src="https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/aws-codepipeline-images/roll-back.png" />
+
+<HighlightBlock color="#f9e4ff">
+    <h3>Key notes ✏️:</h3>
+    <h4>What's rollback?</h4>
+    <span>
+        A rollback lets you go back to a previous version of your application
+        that worked well—this can be a lifesaver if new changes cause problems!
+        In this instance, you only rolled back the deployment stage. This means
+        your source code and build won't be touched, but the version of the
+        application on the server is back to how it was before your latest
+        update.
+    </span>
+</HighlightBlock>
+
+Simply select the "Release change" button again to bring back the latest version.
+
+<img src="https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/aws-codepipeline-images/release-change-button.png" />
+
+Woohoo!! Now I have a fully managed CI/CD pipeline working!
+
+#### Big thanks to [@NextWork](https://www.nextwork.org/) for setting up this engaging challenge!
