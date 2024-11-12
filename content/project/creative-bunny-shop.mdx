@@ -6,7 +6,7 @@ cover: images/creative-bunny.gif
 thumbnail: /images/thumbnails/creative-bunny-thumbnail2.webp
 summary: E-commerce
 anchor: creative-bunny-web
-stacks: React | Redux Toolkit | Firebase | TypeScript | SASS | Stripe
+stacks: React | Redux Toolkit | Passkeys | Firebase | TypeScript | SASS | Stripe
 website: https://cerulean-beijinho-3bc29d.netlify.app
 github: https://github.com/tifff-wang/Creativebunny-e-Commerce-Shop
 published: true
@@ -18,7 +18,7 @@ published: true
 
 ## Tech stacks
 
-React, Redux Toolkit, Firebase, TypeScript, SaSS, Stripe
+React, Redux Toolkit, Passkeys, Firebase, TypeScript, SaSS, Stripe
 
 ## Project Overview
 
@@ -30,6 +30,18 @@ and images are copyrighted by Creative Bunny Ltd. Working on this project has st
 my skills in the React and Redux frameworks, and has provided valuable practice with
 essential e-commerce features such as setting up add-to-cart, checkout, and Stripe
 payment functionalities.
+
+## Recent update: Passkeys Authentication
+
+The website now supports Passkey authentication as a secure and convenient passwordless sign-in option! Registered users can create a Passkey, allowing them to access their accounts seamlessly without needing to remember or enter a traditional password on future visits.
+
+![image](https://tech-portfolio-images.s3.ap-southeast-2.amazonaws.com/creative-bunny-readme-images/sign-in-with-passkey.png)
+
+#### How It Works:
+
+1. Registration: Users can sign up as usual using an email and password.
+2. Passkey Setup: After registration, users are given the option to create a Passkey.
+3. Passwordless Sign-In: On subsequent logins, users with a registered Passkey can sign in effortlessly with this option, enhancing both security and user convenience.
 
 ## Key pages
 
@@ -89,7 +101,7 @@ Auth:
 <div>
 
 This project is also a playground for trying new
-things. I’m currently in the process of adding **Passkey** to provide
+things. I've recently added **Passkeys** to provide
 users with a passwordless sign-in option. After having a taste of building a chatbot with Amazon Lex
 during one of my AWS projects (see <a href="https://tiffwang.co.nz/awsproject/build-chatbot-with-amazon-lex" target="\_blank">
 here</a>), going ahead, I’m interested in developing an **AI chatbot** for my e-commerce website by utilising Amazon Lex and training foundation models with Amazon Bedrock to enhance product recommendations and improve order checking using my own product data.
@@ -101,7 +113,6 @@ I aim not only to enhance the site but also to take the chance to experiment wit
 In the next phase of development, I plan to:
 
 -   **Complete the footer links**: Add relevant pages to the links in the footer.
--   **Implement PassKey**: Users will have the option to create a Passkey for passwordless sign-in.
 -   **Migrate to AWS**: As this e-commerce project evolves, such as integrating more features
     like order management and admin functionalities, transitioning to a more robust and scalable architecture
     becomes essential. Currently, the project uses Firebase for database interactions and Netlify
